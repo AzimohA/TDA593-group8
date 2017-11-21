@@ -83,6 +83,8 @@ public class Main {
 		robots.add(robot1);
 		robots.add(robot2);
 
+		robot2.setDestination(new Point(1,2));
+		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(robots, e);
 
 	}

@@ -4,7 +4,7 @@
 
 package Model;
 
-import Model.Mission;
+import Model.IMission;
 import java.util.List;
 
 // Manual imports
@@ -21,7 +21,7 @@ public class Strategy {
 	 * @param mission 
 	 * @return 
 	 */
-	public List<Point> getStrategy(Mission mission) {
+	public List<Point> getStrategy(IMission mission) {
 	}
 
 	/**
@@ -29,6 +29,6 @@ public class Strategy {
 	 * @param mission 
 	 * @return 
 	 */
-	private List<Point> calculateStrategy(Mission mission) {
+	private List<Point> calculateStrategy(IMission mission) {
 	}
 };

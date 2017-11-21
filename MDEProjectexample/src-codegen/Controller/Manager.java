@@ -5,6 +5,8 @@
 package Controller;
 
 import Controller.IManager;
+import Model.IMission;
+import Model.IRobot;
 import Model.Mission;
 import Model.Robot;
 import java.lang.String;
@@ -29,7 +31,7 @@ public class Manager implements IManager {
 	 * @param robot 
 	 * @return 
 	 */
-	public Robot getRobot(String robot) {
+	public IRobot getRobot(String robot) {
 	}
 
 	/**
@@ -37,7 +39,7 @@ public class Manager implements IManager {
 	 * @param mission 
 	 * @return 
 	 */
-	public Mission getMission(String mission) {
+	public IMission getMission(String mission) {
 	}
 
 	/**

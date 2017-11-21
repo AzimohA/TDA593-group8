@@ -6,7 +6,6 @@ package Model;
 
 import Model.IMission;
 import Model.IRobot;
-import Model.Mission;
 import Model.State;
 import Model.Strategy;
 import java.awt.Point;
@@ -42,20 +41,6 @@ public class Robot implements IRobot {
 	 * 
 	 * @return 
 	 */
-	public String getState() {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public Mission getMission() {
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
 	public Point getPosition() {
 	}
 
@@ -70,5 +55,19 @@ public class Robot implements IRobot {
 	 * 
 	 */
 	private void move() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getState() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public IMission getMission() {
 	}
 };

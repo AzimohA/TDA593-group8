@@ -4,7 +4,7 @@
 
 package Model;
 
-import Model.Mission;
+import Model.IMission;
 import Model.Strategy;
 import java.awt.Point;
 import java.lang.String;
@@ -24,7 +24,7 @@ public interface IRobot {
 	 * 
 	 * @return 
 	 */
-	public Mission getMission();
+	public IMission getMission();
 
 	/**
 	 * 
