@@ -4,9 +4,20 @@
 
 package Model;
 
+import java.util.List;
+
+// Manual imports
+import java.awt.Point;
+// End of manual imports
+
 /************************************************************/
 /**
  * 
  */
 public interface IMission {
+	/**
+	 * 
+	 * @return 
+	 */
+	public List<Point> getPoints();
 };

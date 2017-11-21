@@ -16,30 +16,35 @@ import java.util.List;
  */
 public class Manager implements IManager {
 	/**
-				 * 
-				 */
-				public List<Robot>[] arraylist<robot>;
-	/**
-				 * 
-				 */
-				public List<Mission>[] arraylist<mission>;
-
+	 * 
+	 */
+	public List<Robot> robots;
 	/**
 	 * 
 	 */
-	public void Operation1() {
+	public List<Mission> missions;
+
+	/**
+	 * 
+	 * @param robot 
+	 * @return 
+	 */
+	public Robot getRobot(String robot) {
 	}
 
 	/**
 	 * 
+	 * @param mission 
+	 * @return 
 	 */
-	public void assignMission() {
+	public Mission getMission(String mission) {
 	}
 
 	/**
 	 * 
 	 * @param robot 
+	 * @param mission 
 	 */
-	public void assignMission(String robot) {
+	public void assignMission(String robot, String mission) {
 	}
 };

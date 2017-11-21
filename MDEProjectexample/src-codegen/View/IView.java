@@ -13,31 +13,28 @@ import java.lang.String;
 public interface IView {
 	/**
 	 * 
-	 * @param state 
-	 * @param  
 	 */
-	public void updateState(String state, void null) ;
+	public void updateView();
 
 	/**
 	 * 
 	 * @param robot 
-	 * @param mission 
-	 * @param  
+	 * @param state 
 	 */
-	public void updateMission(String robot, String mission, void null) ;
+	public void updateState(String robot, String state);
 
 	/**
 	 * 
 	 * @param robot 
 	 * @param x 
 	 * @param y 
-	 * @param  
 	 */
-	public void updatePosition(String robot, int x, int y, void null) ;
+	public void updatePosition(String robot, int x, int y);
 
 	/**
 	 * 
-	 * @param  
+	 * @param robot 
+	 * @param mission 
 	 */
-	public void updateView(void null) ;
+	public void updateMission(String robot, String mission);
 };

@@ -4,12 +4,71 @@
 
 package Model;
 
+import Model.IMission;
 import Model.IRobot;
+import Model.Mission;
+import Model.State;
 import Model.Strategy;
+import java.awt.Point;
+import java.lang.String;
 
 /************************************************************/
 /**
  * 
  */
 public class Robot implements IRobot {
+	/**
+	 * 
+	 */
+	private String name;
+	/**
+	 * 
+	 */
+	private Point position;
+	/**
+	 * 
+	 */
+	public Strategy strategy;
+	/**
+	 * 
+	 */
+	public State state;
+	/**
+	 * 
+	 */
+	public IMission mission;
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getState() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Mission getMission() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Point getPosition() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Strategy getStrategy() {
+	}
+
+	/**
+	 * 
+	 */
+	private void move() {
+	}
 };

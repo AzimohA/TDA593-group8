@@ -16,5 +16,43 @@ public class Monitor implements INotify {
 	/**
 	 * 
 	 */
-	public IView iview;
+	public IView view;
+	/**
+	 * 
+	 */
+	public IRobot robot;
+
+	/**
+	 * 
+	 * @param robot 
+	 */
+	public void notify(IRobot robot) {
+	}
+
+	/**
+	 * 
+	 * @param robot 
+	 */
+	private void updateState(IRobot robot) {
+	}
+
+	/**
+	 * 
+	 */
+	private void updateView() {
+	}
+
+	/**
+	 * 
+	 * @param robot 
+	 */
+	private void updatePosition(IRobot robot) {
+	}
+
+	/**
+	 * 
+	 * @param robot 
+	 */
+	private void updateMission(IRobot robot) {
+	}
 };

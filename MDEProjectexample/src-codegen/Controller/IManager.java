@@ -15,7 +15,6 @@ public interface IManager {
 	 * 
 	 * @param robot 
 	 * @param mission 
-	 * @param  
 	 */
-	public void assignMission(String robot, String mission, void null) ;
+	public void assignMission(String robot, String mission);
 };

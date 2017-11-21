@@ -4,32 +4,33 @@
 
 package Model;
 
-import Model.IMission;
-import java.lang.String;
-import java.util.List;
-
-// Manual imports
-import java.awt.Point;
-// End of manual imports
-
 /************************************************************/
 /**
  * 
  */
-public class Mission implements IMission {
+public enum State {
 	/**
 	 * 
 	 */
-	private String name;
+	OKAY,
 	/**
 	 * 
 	 */
-	private List<Point> points;
-
+	BROKEN,
 	/**
 	 * 
-	 * @return 
 	 */
-	public List<Point> getPoints() {
-	}
+	WHEEL,
+	/**
+	 * 
+	 */
+	CAMERA,
+	/**
+	 * 
+	 */
+	SENSOR,
+	/**
+	 * 
+	 */
+	BLOCKED;
 };

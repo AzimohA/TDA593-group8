@@ -4,9 +4,37 @@
 
 package Model;
 
+import Model.Mission;
+import Model.Strategy;
+import java.awt.Point;
+import java.lang.String;
+
 /************************************************************/
 /**
  * 
  */
 public interface IRobot {
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getState();
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Mission getMission();
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Point getPosition();
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Strategy getStrategy();
 };

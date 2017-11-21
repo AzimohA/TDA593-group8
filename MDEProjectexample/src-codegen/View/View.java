@@ -5,10 +5,13 @@
 package View;
 
 import Controller.IManager;
-import Controller.Manager;
 import View.IView;
 import java.lang.String;
 import java.util.HashMap;
+
+// Manual imports
+import java.awt.Point;
+// End of manual imports
 
 /************************************************************/
 /**
@@ -18,7 +21,7 @@ public class View implements IView {
 	/**
 	 * 
 	 */
-	public IManager[] imanager;
+	public IManager imanager;
 	/**
 	 * 
 	 */
@@ -27,41 +30,19 @@ public class View implements IView {
 	 * 
 	 */
 	private HashMap<String, Point> missions;
-	/**
-	 * 
-	 */
-	private Manager manager;
-
-	/**
-	 * 
-	 */
-	public void Operation1() {
-	}
-
-	/**
-	 * 
-	 */
-	public void updateState() {
-	}
-
-	/**
-	 * 
-	 * @param state 
-	 */
-	public void updateState(String state) {
-	}
-
-	/**
-	 * 
-	 */
-	public void updateMission() {
-	}
 
 	/**
 	 * 
 	 * @param robot 
+	 * @param mission 
 	 */
-	public void updateMission(String robot) {
+	private void assignMission(String robot, String mission) {
+	}
+
+	/**
+	 * 
+	 */
+	private void stopEverything() {
 	}
 
 	/**
@@ -74,42 +55,11 @@ public class View implements IView {
 
 	/**
 	 * 
-	 */
-	public void updatePosition() {
-	}
-
-	/**
-	 * 
-	 * @param robot 
-	 */
-	public void updatePosition(String robot) {
-	}
-
-	/**
-	 * 
-	 * @param state 
-	 * @param  
-	 */
-	public void updateState(String state, void null) {
-	}
-
-	/**
-	 * 
-	 * @param robot 
-	 * @param mission 
-	 * @param  
-	 */
-	public void updateMission(String robot, String mission, void null) {
-	}
-
-	/**
-	 * 
 	 * @param robot 
 	 * @param x 
 	 * @param y 
-	 * @param  
 	 */
-	public void updatePosition(String robot, int x, int y, void null) {
+	public void updatePosition(String robot, int x, int y) {
 	}
 
 	/**
@@ -120,24 +70,9 @@ public class View implements IView {
 
 	/**
 	 * 
-	 * @param  
-	 */
-	public void updateView(void null) {
-	}
-
-	/**
-	 * 
 	 * @param robot 
-	 * @param mission 
-	 * @param  
+	 * @param state 
 	 */
-	private void assignMission(String robot, String mission, void null) {
-	}
-
-	/**
-	 * 
-	 * @param  
-	 */
-	private void stopEverything(void null) {
+	public void updateState(String robot, String state) {
 	}
 };

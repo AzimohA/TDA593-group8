@@ -9,4 +9,9 @@ package Model;
  * 
  */
 public class Adapt {
+	/**
+	 * 
+	 */
+	public void adapt() {
+	}
 };

@@ -4,9 +4,16 @@
 
 package Controller;
 
+import Model.IRobot;
+
 /************************************************************/
 /**
  * 
  */
 public interface INotify {
+	/**
+	 * 
+	 * @param robot 
+	 */
+	public void notify(IRobot robot);
 };
