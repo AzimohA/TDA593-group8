@@ -17,7 +17,10 @@ import simbad.sim.VerticalWall;
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
-
+		
+		//hej
+		///hej
+		Color cR = Color.BLUE;
 		EnvironmentDescription e = new EnvironmentDescription();
 
 		Color cGray = Color.GRAY;
