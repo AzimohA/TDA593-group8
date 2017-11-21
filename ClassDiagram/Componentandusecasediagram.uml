@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_pMIh4MPBEeeTnaVsCynysg" name="src">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_v0vRsMR-Eeer-4yLD56EuQ" name="Operator"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_wOdZQMR-Eeer-4yLD56EuQ" name="Robot"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_7zrI4MR-Eeer-4yLD56EuQ" name="ROVU">
+    <ownedUseCase xmi:type="uml:UseCase" xmi:id="_EwbBcMR_Eeer-4yLD56EuQ" name="Execute mission"/>
+    <ownedUseCase xmi:type="uml:UseCase" xmi:id="_Fd-D8MR_Eeer-4yLD56EuQ" name="Assign mission"/>
+    <ownedUseCase xmi:type="uml:UseCase" xmi:id="_GIC7sMR_Eeer-4yLD56EuQ" name="Monitor" subject="_EofT0MSHEeeF5q38tP4B1w"/>
+    <ownedUseCase xmi:type="uml:UseCase" xmi:id="_Goy4UMR_Eeer-4yLD56EuQ" name="System error handling"/>
+    <ownedUseCase xmi:type="uml:UseCase" xmi:id="_HNHtYMR_Eeer-4yLD56EuQ" name="Deploy strategies"/>
+    <ownedUseCase xmi:type="uml:UseCase" xmi:id="_Kvox4MR_Eeer-4yLD56EuQ" name="Naviage through areas"/>
+    <ownedUseCase xmi:type="uml:UseCase" xmi:id="_MpgdkMR_Eeer-4yLD56EuQ" name="Adapt"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_YZONAMR_Eeer-4yLD56EuQ" memberEnd="_YZVhwMR_Eeer-4yLD56EuQ _YZWI0MR_Eeer-4yLD56EuQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YZTFgMR_Eeer-4yLD56EuQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YZTFgcR_Eeer-4yLD56EuQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_YZVhwMR_Eeer-4yLD56EuQ" name="assign mission" type="_Fd-D8MR_Eeer-4yLD56EuQ" association="_YZONAMR_Eeer-4yLD56EuQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_YZWI0MR_Eeer-4yLD56EuQ" name="operator" type="_v0vRsMR-Eeer-4yLD56EuQ" association="_YZONAMR_Eeer-4yLD56EuQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZYLvoMR_Eeer-4yLD56EuQ" memberEnd="_ZYM9wcR_Eeer-4yLD56EuQ _ZYM9wsR_Eeer-4yLD56EuQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYMWsMR_Eeer-4yLD56EuQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZYM9wMR_Eeer-4yLD56EuQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZYM9wcR_Eeer-4yLD56EuQ" name="monitor" type="_GIC7sMR_Eeer-4yLD56EuQ" association="_ZYLvoMR_Eeer-4yLD56EuQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZYM9wsR_Eeer-4yLD56EuQ" name="operator" type="_v0vRsMR-Eeer-4yLD56EuQ" association="_ZYLvoMR_Eeer-4yLD56EuQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ahA_8MR_Eeer-4yLD56EuQ" memberEnd="_ahCOEMR_Eeer-4yLD56EuQ _ahCOEcR_Eeer-4yLD56EuQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ahBnAMR_Eeer-4yLD56EuQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ahBnAcR_Eeer-4yLD56EuQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ahCOEMR_Eeer-4yLD56EuQ" name="naviage through areas" type="_Kvox4MR_Eeer-4yLD56EuQ" association="_ahA_8MR_Eeer-4yLD56EuQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ahCOEcR_Eeer-4yLD56EuQ" name="robot" type="_wOdZQMR-Eeer-4yLD56EuQ" association="_ahA_8MR_Eeer-4yLD56EuQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bY0xsMR_Eeer-4yLD56EuQ" memberEnd="_bY1YwsR_Eeer-4yLD56EuQ _bY1_0MR_Eeer-4yLD56EuQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bY1YwMR_Eeer-4yLD56EuQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bY1YwcR_Eeer-4yLD56EuQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bY1YwsR_Eeer-4yLD56EuQ" name="execute mission" type="_EwbBcMR_Eeer-4yLD56EuQ" association="_bY0xsMR_Eeer-4yLD56EuQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bY1_0MR_Eeer-4yLD56EuQ" name="robot" type="_wOdZQMR-Eeer-4yLD56EuQ" association="_bY0xsMR_Eeer-4yLD56EuQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cFSPEMR_Eeer-4yLD56EuQ" memberEnd="_cFTdMMR_Eeer-4yLD56EuQ _cFTdMcR_Eeer-4yLD56EuQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cFS2IMR_Eeer-4yLD56EuQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cFS2IcR_Eeer-4yLD56EuQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cFTdMMR_Eeer-4yLD56EuQ" name="system error handling" type="_Goy4UMR_Eeer-4yLD56EuQ" association="_cFSPEMR_Eeer-4yLD56EuQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cFTdMcR_Eeer-4yLD56EuQ" name="robot" type="_wOdZQMR-Eeer-4yLD56EuQ" association="_cFSPEMR_Eeer-4yLD56EuQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dd5n0MR_Eeer-4yLD56EuQ" memberEnd="_dd618sR_Eeer-4yLD56EuQ _dd7dAMR_Eeer-4yLD56EuQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dd618MR_Eeer-4yLD56EuQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dd618cR_Eeer-4yLD56EuQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dd618sR_Eeer-4yLD56EuQ" name="deploy strategies" type="_HNHtYMR_Eeer-4yLD56EuQ" association="_dd5n0MR_Eeer-4yLD56EuQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dd7dAMR_Eeer-4yLD56EuQ" name="robot" type="_wOdZQMR-Eeer-4yLD56EuQ" association="_dd5n0MR_Eeer-4yLD56EuQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_eEhi8MR_Eeer-4yLD56EuQ" memberEnd="_eEiKAsR_Eeer-4yLD56EuQ _eEixEMR_Eeer-4yLD56EuQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eEiKAMR_Eeer-4yLD56EuQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eEiKAcR_Eeer-4yLD56EuQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_eEiKAsR_Eeer-4yLD56EuQ" name="adapt" type="_MpgdkMR_Eeer-4yLD56EuQ" association="_eEhi8MR_Eeer-4yLD56EuQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_eEixEMR_Eeer-4yLD56EuQ" type="_wOdZQMR-Eeer-4yLD56EuQ" association="_eEhi8MR_Eeer-4yLD56EuQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_79aaEMSGEeeF5q38tP4B1w" name="View">
+    <packagedElement xmi:type="uml:Component" xmi:id="_EofT0MSHEeeF5q38tP4B1w" name="View" visibility="package" useCase="_GIC7sMR_Eeer-4yLD56EuQ">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_FWbtAMSJEeeF5q38tP4B1w" client="_EofT0MSHEeeF5q38tP4B1w" supplier="_CXsD8MSJEeeF5q38tP4B1w"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_918pAMSGEeeF5q38tP4B1w" name="Controller">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_HmHikMSHEeeF5q38tP4B1w" name="Assign mission"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_WRl4gMSHEeeF5q38tP4B1w" name="Mission">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_qRIs4MVHEeejDch_bsaW3w" client="_WRl4gMSHEeeF5q38tP4B1w" supplier="_IaH88MSIEeeF5q38tP4B1w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_jl180MSHEeeF5q38tP4B1w" name="CheckState">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_KpKK4MSJEeeF5q38tP4B1w" client="_jl180MSHEeeF5q38tP4B1w" supplier="_TRCcIMSIEeeF5q38tP4B1w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_L3XqcMSJEeeF5q38tP4B1w" client="_jl180MSHEeeF5q38tP4B1w" supplier="_EofT0MSHEeeF5q38tP4B1w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_CXsD8MSJEeeF5q38tP4B1w" name="theviewcontroller">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_3emlEMSJEeeF5q38tP4B1w" client="_CXsD8MSJEeeF5q38tP4B1w" supplier="_z_zi8MSJEeeF5q38tP4B1w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_jtEUQMSJEeeF5q38tP4B1w" client="_HmHikMSHEeeF5q38tP4B1w" supplier="_IaH88MSIEeeF5q38tP4B1w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="__F-tgMSGEeeF5q38tP4B1w" name="Model">
+    <packagedElement xmi:type="uml:Component" xmi:id="_3FMRcMSHEeeF5q38tP4B1w" name="Sense"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_4ce0gMSHEeeF5q38tP4B1w" name="Plan" visibility="package">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_iPl0MMSKEeeF5q38tP4B1w" client="_4ce0gMSHEeeF5q38tP4B1w" supplier="_3FMRcMSHEeeF5q38tP4B1w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_EXDwIMSIEeeF5q38tP4B1w" name="deloyerstrategies">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_okxRsMVHEeejDch_bsaW3w" client="_EXDwIMSIEeeF5q38tP4B1w" supplier="_4ce0gMSHEeeF5q38tP4B1w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_IaH88MSIEeeF5q38tP4B1w" name="mission">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ZAzJYMSKEeeF5q38tP4B1w" client="_IaH88MSIEeeF5q38tP4B1w" supplier="_4ce0gMSHEeeF5q38tP4B1w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_TRCcIMSIEeeF5q38tP4B1w" name="state">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_kagpEMSJEeeF5q38tP4B1w" client="_TRCcIMSIEeeF5q38tP4B1w" supplier="_jl180MSHEeeF5q38tP4B1w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_z_zi8MSJEeeF5q38tP4B1w" name="Location"/>
+  </packagedElement>
+</uml:Model>
