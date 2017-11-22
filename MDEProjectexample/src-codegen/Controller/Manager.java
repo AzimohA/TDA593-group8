@@ -7,10 +7,12 @@ package Controller;
 import Controller.IManager;
 import Model.IMission;
 import Model.IRobot;
-import Model.Mission;
-import Model.Robot;
 import java.lang.String;
 import java.util.List;
+
+// Manual imports
+import java.util.ArrayList;
+// End of manual imports
 
 /************************************************************/
 /**
@@ -20,11 +22,16 @@ public class Manager implements IManager {
 	/**
 	 * 
 	 */
-	public List<Robot> robots;
+	public List<IRobot> robots;
 	/**
 	 * 
 	 */
-	public List<Mission> missions;
+	public List<IMission> missions;
+
+	public Manager(ArrayList<IMission> missions, ArrayList<IRobot> robots) {
+		this.robots = robots;
+		this.missions = missions;
+	}
 
 	/**
 	 * 
@@ -32,6 +39,12 @@ public class Manager implements IManager {
 	 * @return 
 	 */
 	public IRobot getRobot(String robot) {
+		for(int i = 0; i < robots.size(); i++) {
+			if(robots.get(i).getName().equals(robot)) {
+				return robots.get(i);
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -40,6 +53,12 @@ public class Manager implements IManager {
 	 * @return 
 	 */
 	public IMission getMission(String mission) {
+		for(int i = 0; i < missions.size(); i++) {
+			if(missions.get(i).getName().equals(mission)) {
+				return missions.get(i);
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -48,5 +67,6 @@ public class Manager implements IManager {
 	 * @param mission 
 	 */
 	public void assignMission(String robot, String mission) {
+		getRobot(robot).setMission(getMission(mission));
 	}
 };

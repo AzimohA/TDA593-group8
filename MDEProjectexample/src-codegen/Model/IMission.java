@@ -4,6 +4,7 @@
 
 package Model;
 
+import java.lang.String;
 import java.util.List;
 
 // Manual imports
@@ -20,4 +21,10 @@ public interface IMission {
 	 * @return 
 	 */
 	public List<Point> getPoints();
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getName();
 };

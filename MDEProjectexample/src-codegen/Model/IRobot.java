@@ -37,4 +37,28 @@ public interface IRobot {
 	 * @return 
 	 */
 	public Strategy getStrategy();
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getName();
+
+	/**
+	 * 
+	 * @param mission 
+	 */
+	public void setMission(IMission mission);
+
+	/**
+	 * 
+	 * @param position 
+	 */
+	public void setPosition(Point position);
+
+	/**
+	 * 
+	 * @param strategy 
+	 */
+	public void setStrategy(Strategy strategy);
 };

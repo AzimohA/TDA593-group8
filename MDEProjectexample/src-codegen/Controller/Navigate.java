@@ -36,19 +36,6 @@ public class Navigate implements INotify {
 
 	/**
 	 * 
-	 * @param degrees 
-	 */
-	private void turn(int degrees) {
-	}
-
-	/**
-	 * 
-	 */
-	private void forward() {
-	}
-
-	/**
-	 * 
 	 * @param robot 
 	 */
 	public void notify(IRobot robot) {

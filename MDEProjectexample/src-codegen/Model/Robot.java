@@ -4,12 +4,14 @@
 
 package Model;
 
+import Controller.INotify;
 import Model.IMission;
 import Model.IRobot;
 import Model.State;
 import Model.Strategy;
 import java.awt.Point;
 import java.lang.String;
+import java.util.List;
 
 /************************************************************/
 /**
@@ -27,7 +29,7 @@ public class Robot implements IRobot {
 	/**
 	 * 
 	 */
-	public Strategy strategy;
+	private Strategy strategy;
 	/**
 	 * 
 	 */
@@ -36,6 +38,10 @@ public class Robot implements IRobot {
 	 * 
 	 */
 	public IMission mission;
+	/**
+	 * 
+	 */
+	public List<INotify> subscribers;
 
 	/**
 	 * 
@@ -69,5 +75,33 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public IMission getMission() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getName() {
+	}
+
+	/**
+	 * 
+	 * @param mission 
+	 */
+	public void setMission(IMission mission) {
+	}
+
+	/**
+	 * 
+	 * @param strategy 
+	 */
+	public void setStrategy(Strategy strategy) {
+	}
+
+	/**
+	 * 
+	 * @param position 
+	 */
+	public void setPosition(Point position) {
 	}
 };
