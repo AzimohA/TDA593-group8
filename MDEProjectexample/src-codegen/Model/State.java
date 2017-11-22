@@ -32,9 +32,5 @@ public enum State {
 	/**
 	 * 
 	 */
-	BLOCKED,
-	/**
-	 * 
-	 */
-	TEST;
+	BLOCKED;
 };
