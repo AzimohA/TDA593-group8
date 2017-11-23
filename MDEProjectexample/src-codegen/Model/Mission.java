@@ -31,7 +31,14 @@ public class Mission implements IMission {
 	 * 
 	 * @return 
 	 */
+	
+	public Mission(String name, List<Point> points) {
+		this.name = name;
+		this.points = points;
+	}
+	
 	public List<Point> getPoints() {
+		return this.points;
 	}
 
 	/**
@@ -39,5 +46,6 @@ public class Mission implements IMission {
 	 * @return 
 	 */
 	public String getName() {
+		return this.name;
 	}
 };

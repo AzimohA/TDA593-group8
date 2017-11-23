@@ -22,6 +22,9 @@ public class Strategy {
 	 * @return 
 	 */
 	public List<Point> getStrategy(IMission mission) {
+		List<Point> strategy = calculateStrategy(mission);
+		//returns the order of the list because now it will get the right list
+		return strategy; 
 	}
 
 	/**
@@ -30,5 +33,7 @@ public class Strategy {
 	 * @return 
 	 */
 	private List<Point> calculateStrategy(IMission mission) {
+		return mission.getPoints();
+		
 	}
 };
