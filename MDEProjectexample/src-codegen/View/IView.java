@@ -5,6 +5,7 @@
 package View;
 
 import java.lang.String;
+import project.Point;
 
 import project.Point;
 
@@ -28,10 +29,9 @@ public interface IView {
 	/**
 	 * 
 	 * @param robot 
-	 * @param x 
-	 * @param y 
+	 * @param point 
 	 */
-	public void updatePosition(String robot, Point position);
+	public void updatePosition(String robot, Point point);
 
 	/**
 	 * 

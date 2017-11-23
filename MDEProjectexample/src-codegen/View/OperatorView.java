@@ -40,11 +40,11 @@ public class OperatorView extends JFrame implements IView {
 	/**
 	 * 
 	 */
-	private HashMap<String, String> activeMission;
+	private HashMap<String, String> activeMissions;
 	/**
 	 * 
 	 */
-	private List<String> missions;
+	public List<String> missions;
 	
 	public OperatorView() {
 		getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -70,7 +70,7 @@ public class OperatorView extends JFrame implements IView {
 		initComponents();
 	}
 	
-	/*
+	/**
 	 * 
 	 */
 	private void initComponents() {
@@ -102,17 +102,7 @@ public class OperatorView extends JFrame implements IView {
 	 * @param mission 
 	 */
 	public void updateMission(String robot, String mission) {
-		activeMission.put(robot, mission);
-	}
-
-	/**
-	 * 
-	 * @param robot 
-	 * @param x 
-	 * @param y 
-	 */
-	public void updatePosition(String robot, Point position) {
-		robots.put(robot, position);
+		activeMissions.put(robot, mission);
 	}
 
 	/**
@@ -127,5 +117,14 @@ public class OperatorView extends JFrame implements IView {
 	 * @param state 
 	 */
 	public void updateState(String robot, String state) {
+	}
+
+	/**
+	 * 
+	 * @param robot 
+	 * @param point 
+	 */
+	public void updatePosition(String robot, Point point) {
+		robots.put(robot, point);
 	}
 };

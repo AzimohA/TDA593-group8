@@ -4,20 +4,23 @@
 
 package Model;
 
-import Model.IMission;
 import java.lang.String;
-import java.util.List;
-
-// Manual imports
+import project.LocationController;
 import project.Point;
-import java.util.ArrayList;
-// End of manual imports
 
 /************************************************************/
 /**
  * 
  */
-public class Mission implements IMission {
+public class Area {
+	/**
+	 * 
+	 */
+	private Point centerPoint;
+	/**
+	 * 
+	 */
+	private int radius;
 	/**
 	 * 
 	 */
@@ -25,13 +28,20 @@ public class Mission implements IMission {
 	/**
 	 * 
 	 */
-	private List<Point> points;
+	private LocationController locationcontroller;
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public List<Point> getPoints() {
+	public Point getCenterPoint() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public int getRadius() {
 	}
 
 	/**
@@ -39,5 +49,12 @@ public class Mission implements IMission {
 	 * @return 
 	 */
 	public String getName() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public LocationController getLocationController() {
 	}
 };
