@@ -4,6 +4,7 @@
 
 package Model;
 
+import Controller.Observer;
 import Model.IMission;
 import Model.Strategy;
 import java.awt.Point;
@@ -61,4 +62,15 @@ public interface IRobot {
 	 * @param strategy 
 	 */
 	public void setStrategy(Strategy strategy);
+
+	/**
+	 * 
+	 */
+	public void notifyAllObservers();
+
+	/**
+	 * 
+	 * @param observer 
+	 */
+	public void attach(Observer observer);
 };

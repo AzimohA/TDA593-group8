@@ -18,11 +18,11 @@ import java.util.List;
 /**
  * 
  */
-public class View implements IView {
+public class OperatorView implements IView {
 	/**
 	 * 
 	 */
-	public IManager imanager;
+	private IManager imanager;
 	/**
 	 * 
 	 */

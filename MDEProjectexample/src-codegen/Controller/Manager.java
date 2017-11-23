@@ -22,11 +22,11 @@ public class Manager implements IManager {
 	/**
 	 * 
 	 */
-	public List<IRobot> robots;
+	private List<IRobot> robots;
 	/**
 	 * 
 	 */
-	public List<IMission> missions;
+	private List<IMission> missions;
 
 	public Manager(ArrayList<IMission> missions, ArrayList<IRobot> robots) {
 		this.robots = robots;

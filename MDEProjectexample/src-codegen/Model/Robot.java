@@ -4,7 +4,7 @@
 
 package Model;
 
-import Controller.INotify;
+import Controller.Observer;
 import Model.IMission;
 import Model.IRobot;
 import Model.State;
@@ -33,15 +33,15 @@ public class Robot implements IRobot {
 	/**
 	 * 
 	 */
-	public State state;
+	private State state;
 	/**
 	 * 
 	 */
-	public IMission mission;
+	private IMission mission;
 	/**
 	 * 
 	 */
-	public List<INotify> subscribers;
+	private List<Observer> observers;
 
 	/**
 	 * 
@@ -103,5 +103,18 @@ public class Robot implements IRobot {
 	 * @param position 
 	 */
 	public void setPosition(Point position) {
+	}
+
+	/**
+	 * 
+	 */
+	public void notifyAllObservers() {
+	}
+
+	/**
+	 * 
+	 * @param observer 
+	 */
+	public void attach(Observer observer) {
 	}
 };
