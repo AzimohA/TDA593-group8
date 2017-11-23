@@ -8,7 +8,7 @@ import Model.IMission;
 import java.util.List;
 
 // Manual imports
-import java.awt.Point;
+import project.Point;
 // End of manual imports
 
 /************************************************************/

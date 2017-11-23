@@ -44,9 +44,9 @@ public class Robot implements IRobot {
 	 */
 	private List<Observer> observers;
 	/**
-				 * 
-				 */
-				public List<Area> list<area>;
+	 * 
+	 */
+	public List<Area> areas;
 
 	/**
 	 * 

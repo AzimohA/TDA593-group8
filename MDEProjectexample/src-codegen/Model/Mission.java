@@ -9,7 +9,7 @@ import java.lang.String;
 import java.util.List;
 
 // Manual imports
-import java.awt.Point;
+import project.Point;
 import java.util.ArrayList;
 // End of manual imports
 
