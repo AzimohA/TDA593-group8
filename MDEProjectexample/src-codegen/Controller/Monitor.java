@@ -4,30 +4,23 @@
 
 package Controller;
 
-import Controller.INotify;
+import Controller.Observer;
+import Controller.ViewFactory;
 import Model.IRobot;
-import View.IView;
 
 /************************************************************/
 /**
  * 
  */
-public class Monitor implements INotify {
+public class Monitor implements Observer {
 	/**
 	 * 
 	 */
-	public IView view;
+	private IRobot robot;
 	/**
 	 * 
 	 */
-	public IRobot robot;
-
-	/**
-	 * 
-	 * @param robot 
-	 */
-	public void notify(IRobot robot) {
-	}
+	private ViewFactory viewfactory;
 
 	/**
 	 * 
@@ -54,5 +47,12 @@ public class Monitor implements INotify {
 	 * @param robot 
 	 */
 	private void updateMission(IRobot robot) {
+	}
+
+	/**
+	 * 
+	 * @param robot 
+	 */
+	public void update(IRobot robot) {
 	}
 };

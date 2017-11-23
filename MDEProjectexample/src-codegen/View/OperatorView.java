@@ -11,17 +11,18 @@ import java.util.HashMap;
 
 // Manual imports
 import java.awt.Point;
+import java.util.List;
 // End of manual imports
 
 /************************************************************/
 /**
  * 
  */
-public class View implements IView {
+public class OperatorView implements IView {
 	/**
 	 * 
 	 */
-	public IManager imanager;
+	private IManager imanager;
 	/**
 	 * 
 	 */
@@ -29,7 +30,7 @@ public class View implements IView {
 	/**
 	 * 
 	 */
-	private HashMap<String, Point> missions;
+	private HashMap<String, List<Point>> missions;
 
 	/**
 	 * 

@@ -79,6 +79,7 @@ public class Main {
 
 		Set<RobotAvatar> robots = new HashSet<>();
 
+<<<<<<< HEAD
 		RobotAvatar robot1 = new RobotAvatar(new Point(5, 9), "Robot 1");
 		RobotAvatar robot2 = new RobotAvatar(new Point(1, 9), "Robot 2");
 
@@ -98,6 +99,15 @@ public class Main {
 	}
 	System.out.print(moves.size());
 		
+=======
+		RobotAvatar robot1 = new RobotAvatar(new Point(1, 1), "Robot 1");
+		RobotAvatar robot2 = new RobotAvatar(new Point(1, 3), "Robot 2");
+
+		robots.add(robot1);
+		robots.add(robot2);
+
+		robot2.setDestination(new Point(-1,-3));
+>>>>>>> master
 		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(robots, e);
 

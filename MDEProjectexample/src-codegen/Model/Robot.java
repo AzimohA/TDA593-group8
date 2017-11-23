@@ -4,12 +4,14 @@
 
 package Model;
 
+import Controller.Observer;
 import Model.IMission;
 import Model.IRobot;
 import Model.State;
 import Model.Strategy;
 import java.awt.Point;
 import java.lang.String;
+import java.util.List;
 
 /************************************************************/
 /**
@@ -27,15 +29,19 @@ public class Robot implements IRobot {
 	/**
 	 * 
 	 */
-	public Strategy strategy;
+	private Strategy strategy;
 	/**
 	 * 
 	 */
-	public State state;
+	private State state;
 	/**
 	 * 
 	 */
-	public IMission mission;
+	private IMission mission;
+	/**
+	 * 
+	 */
+	private List<Observer> observers;
 
 	/**
 	 * 
@@ -69,5 +75,46 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public IMission getMission() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getName() {
+	}
+
+	/**
+	 * 
+	 * @param mission 
+	 */
+	public void setMission(IMission mission) {
+	}
+
+	/**
+	 * 
+	 * @param strategy 
+	 */
+	public void setStrategy(Strategy strategy) {
+	}
+
+	/**
+	 * 
+	 * @param position 
+	 */
+	public void setPosition(Point position) {
+	}
+
+	/**
+	 * 
+	 */
+	public void notifyAllObservers() {
+	}
+
+	/**
+	 * 
+	 * @param observer 
+	 */
+	public void attach(Observer observer) {
 	}
 };

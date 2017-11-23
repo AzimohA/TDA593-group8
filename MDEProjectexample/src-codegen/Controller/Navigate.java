@@ -4,7 +4,7 @@
 
 package Controller;
 
-import Controller.INotify;
+import Controller.Observer;
 import Model.Adapt;
 import Model.IRobot;
 
@@ -12,15 +12,15 @@ import Model.IRobot;
 /**
  * 
  */
-public class Navigate implements INotify {
+public class Navigate implements Observer {
 	/**
 	 * 
 	 */
-	public Adapt adapt;
+	private Adapt adapt;
 	/**
 	 * 
 	 */
-	public IRobot robot;
+	private IRobot robot;
 
 	/**
 	 * 
@@ -36,21 +36,8 @@ public class Navigate implements INotify {
 
 	/**
 	 * 
-	 * @param degrees 
-	 */
-	private void turn(int degrees) {
-	}
-
-	/**
-	 * 
-	 */
-	private void forward() {
-	}
-
-	/**
-	 * 
 	 * @param robot 
 	 */
-	public void notify(IRobot robot) {
+	public void update(IRobot robot) {
 	}
 };

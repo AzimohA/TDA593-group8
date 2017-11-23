@@ -10,10 +10,10 @@ import Model.IRobot;
 /**
  * 
  */
-public interface INotify {
+public interface Observer {
 	/**
 	 * 
 	 * @param robot 
 	 */
-	public void notify(IRobot robot);
+	public void update(IRobot robot);
 };

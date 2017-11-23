@@ -10,6 +10,7 @@ import java.util.List;
 
 // Manual imports
 import java.awt.Point;
+import java.util.ArrayList;
 // End of manual imports
 
 /************************************************************/
@@ -31,5 +32,12 @@ public class Mission implements IMission {
 	 * @return 
 	 */
 	public List<Point> getPoints() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public String getName() {
 	}
 };
