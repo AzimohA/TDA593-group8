@@ -17,6 +17,15 @@ import java.lang.String;
  * 
  */
 public class Robot implements IRobot {
+	
+	public Robot(String name, Point position, Strategy strategy, State state, IMission mission) {
+		this.name = name;
+		this.position = position;
+		this.strategy = strategy;
+		this.state = state;
+		this.mission = mission;
+	}
+	
 	/**
 	 * 
 	 */
