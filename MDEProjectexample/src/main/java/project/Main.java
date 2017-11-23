@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import Controller.Manager;
+import Model.Mission;
 import project.AbstractSimulatorMonitor;
 import project.Point;
 import simbad.sim.AbstractWall;
@@ -15,6 +17,9 @@ import simbad.sim.HorizontalBoundary;
 import simbad.sim.HorizontalWall;
 import simbad.sim.VerticalBoundary;
 import simbad.sim.VerticalWall;
+
+
+
 
 
 
@@ -86,7 +91,7 @@ public class Main {
 		Point room3 = new Point (3.5, -3.5);
 		Point room4 = new Point (3.5, 3.5);
 		
-		ArrayList<Point> missionRobot1 = new ArrayList();
+		java.util.List<Point> missionRobot1 = new ArrayList();
 		missionRobot1.add(room1);
 		missionRobot1.add(room2);
 		missionRobot1.add(new Point(-3.5, -9));
@@ -106,6 +111,11 @@ public class Main {
 		missionRobot4.add(room1);
 		missionRobot4.add(new Point(-3.5, 9));
 		
+		Mission missionforRobot1 = new Mission("missionforRobot1", missionRobot1);
+		Mission missionforRobot2 = new Mission("missionforRobot2", missionRobot2);
+		Mission missionforRobot3 = new Mission("missionforRobot3", missionRobot3);
+		Mission missionforRobot4 = new Mission("missionforRobot4", missionRobot4);
+		
 		robot1.setDestination(room1);
 		//robot1.setDestination(room2);
 		
@@ -117,7 +127,7 @@ public class Main {
 		
 		robot4.setDestination(room4);
 		robot4.setDestination(room1);
-	
+		
 		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(robots, e);
 
