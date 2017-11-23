@@ -6,7 +6,9 @@ package Controller;
 
 import Controller.Observer;
 import Model.Adapt;
+import Model.Area;
 import Model.IRobot;
+import java.util.List;
 
 /************************************************************/
 /**
@@ -21,6 +23,10 @@ public class Navigate implements Observer {
 	 * 
 	 */
 	private IRobot robot;
+	/**
+	 * 
+	 */
+	private List<Area> areas;
 
 	/**
 	 * 
