@@ -8,17 +8,27 @@ import Controller.IManager;
 import View.IView;
 import java.lang.String;
 import java.util.HashMap;
+import java.util.List;
 
 // Manual imports
-import java.awt.Point;
-import java.util.List;
+import project.Point;
 // End of manual imports
+
+import java.awt.FlowLayout;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 
 /************************************************************/
 /**
  * 
  */
-public class OperatorView implements IView {
+public class OperatorView extends JFrame implements IView {
 	/**
 	 * 
 	 */
@@ -30,7 +40,43 @@ public class OperatorView implements IView {
 	/**
 	 * 
 	 */
-	private HashMap<String, List<Point>> missions;
+	private HashMap<String, String> activeMission;
+	/**
+	 * 
+	 */
+	private List<String> missions;
+	
+	public OperatorView() {
+		getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		JPanel panel = new JPanel();
+		getContentPane().add(panel);
+		
+		DefaultListModel<String> rList = new DefaultListModel<>();
+		for (String robot : robots.keySet()) {
+			rList.addElement(robot);
+		}
+		JList<String> list = new JList<>(rList);
+		JScrollPane scroll = new JScrollPane(list);
+		panel.add(scroll);
+		
+		JList<String> missionList = new JList<>();
+		JScrollPane scrollPane = new JScrollPane();
+		panel.add(scrollPane);
+		
+		JButton assignButton = new JButton("Assign");
+		panel.add(assignButton);
+		
+		initComponents();
+	}
+	
+	/*
+	 * 
+	 */
+	private void initComponents() {
+		pack();
+		setVisible(true);
+	}
 
 	/**
 	 * 
@@ -38,12 +84,16 @@ public class OperatorView implements IView {
 	 * @param mission 
 	 */
 	private void assignMission(String robot, String mission) {
+		imanager.assignMission(robot, mission);
 	}
 
 	/**
 	 * 
 	 */
 	private void stopEverything() {
+		for (String robot : robots.keySet()) {
+			imanager.assignMission(robot, "Do nothing");
+		}
 	}
 
 	/**
@@ -52,6 +102,7 @@ public class OperatorView implements IView {
 	 * @param mission 
 	 */
 	public void updateMission(String robot, String mission) {
+		activeMission.put(robot, mission);
 	}
 
 	/**
@@ -60,7 +111,8 @@ public class OperatorView implements IView {
 	 * @param x 
 	 * @param y 
 	 */
-	public void updatePosition(String robot, int x, int y) {
+	public void updatePosition(String robot, Point position) {
+		robots.put(robot, position);
 	}
 
 	/**

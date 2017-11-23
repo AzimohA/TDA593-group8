@@ -14,6 +14,8 @@ import simbad.sim.HorizontalWall;
 import simbad.sim.VerticalBoundary;
 import simbad.sim.VerticalWall;
 
+import View.OperatorView;
+
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -83,9 +85,11 @@ public class Main {
 		robots.add(robot1);
 		robots.add(robot2);
 
-		robot2.setDestination(new Point(-1,-3));
+		//robot2.setDestination(new Point(-1,-3));
 		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(robots, e);
+		
+		OperatorView OV = new OperatorView();
 
 	}
 
