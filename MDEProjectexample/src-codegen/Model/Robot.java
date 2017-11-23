@@ -18,6 +18,14 @@ import java.util.List;
  * 
  */
 public class Robot implements IRobot {
+	
+	public Robot(String name, Point position, Strategy strategy, State state, IMission mission) {
+		this.name = name;
+		this.position = position;
+		this.strategy = strategy;
+		this.state = state;
+		this.mission = mission;
+	}
 	/**
 	 * 
 	 */
@@ -48,6 +56,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public Point getPosition() {
+		return this.position;
 	}
 
 	/**
@@ -55,6 +64,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public Strategy getStrategy() {
+		return this.strategy;
 	}
 
 	/**
@@ -68,6 +78,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public String getState() {
+		return this.state.toString();
 	}
 
 	/**
@@ -75,6 +86,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public IMission getMission() {
+		return this.mission;
 	}
 
 	/**
@@ -82,6 +94,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public String getName() {
+		return this.name;
 	}
 
 	/**
@@ -89,6 +102,7 @@ public class Robot implements IRobot {
 	 * @param mission 
 	 */
 	public void setMission(IMission mission) {
+		this.mission = mission;
 	}
 
 	/**
@@ -96,6 +110,7 @@ public class Robot implements IRobot {
 	 * @param strategy 
 	 */
 	public void setStrategy(Strategy strategy) {
+		this.strategy = strategy;
 	}
 
 	/**
@@ -103,6 +118,7 @@ public class Robot implements IRobot {
 	 * @param position 
 	 */
 	public void setPosition(Point position) {
+		this.position = position;
 	}
 
 	/**
@@ -116,5 +132,6 @@ public class Robot implements IRobot {
 	 * @param observer 
 	 */
 	public void attach(Observer observer) {
+		
 	}
 };
