@@ -1,6 +1,8 @@
 package project;
 
 import java.awt.Color;
+import java.awt.List;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -77,13 +79,25 @@ public class Main {
 
 		Set<RobotAvatar> robots = new HashSet<>();
 
-		RobotAvatar robot1 = new RobotAvatar(new Point(0, 0), "Robot 1");
-		RobotAvatar robot2 = new RobotAvatar(new Point(1, 3), "Robot 2");
+		RobotAvatar robot1 = new RobotAvatar(new Point(5, 9), "Robot 1");
+		RobotAvatar robot2 = new RobotAvatar(new Point(1, 9), "Robot 2");
 
 		robots.add(robot1);
 		robots.add(robot2);
-
-		robot2.setDestination(new Point(1,2));
+		
+		
+		ArrayList<Point> moves = new ArrayList();
+		
+		moves.add(new Point(5,9));
+		moves.add(new Point(,9));
+		moves.add(new Point(3,9));
+		
+	for (int i = 0; i == moves.size(); i++) {
+		robot1.setDestination(moves.get(i));
+		
+	}
+	System.out.print(moves.size());
+		
 		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(robots, e);
 
