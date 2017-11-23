@@ -8,10 +8,11 @@ import Controller.IManager;
 import View.IView;
 import java.lang.String;
 import java.util.HashMap;
+import java.util.List;
 import project.Point;
 
 // Manual imports
-import java.awt.Point;
+import project.Point;
 
 // End of manual imports
 
@@ -31,7 +32,11 @@ public class OperatorView implements IView {
 	/**
 	 * 
 	 */
-	private HashMap<String, String> missions;
+	private HashMap<String, String> activeMissions;
+	/**
+	 * 
+	 */
+	public List<String> missions;
 
 	/**
 	 * 
