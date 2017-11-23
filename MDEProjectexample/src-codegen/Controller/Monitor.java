@@ -13,10 +13,16 @@ import Model.IRobot;
  * 
  */
 public class Monitor implements Observer {
+	
 	/**
 	 * 
 	 */
 	private IRobot robot;
+	
+	public Monitor(IRobot robot) {
+		this.robot = robot;
+		
+	}
 	/**
 	 * 
 	 */
@@ -54,5 +60,9 @@ public class Monitor implements Observer {
 	 * @param robot 
 	 */
 	public void update(IRobot robot) {
+		
 	}
+
+
+	
 };

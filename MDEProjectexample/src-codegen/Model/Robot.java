@@ -57,6 +57,7 @@ public class Robot implements IRobot {
 	 */
 	public Point getPosition() {
 		return this.position;
+		
 	}
 
 	/**
@@ -95,6 +96,7 @@ public class Robot implements IRobot {
 	 */
 	public String getName() {
 		return this.name;
+		
 	}
 
 	/**
@@ -103,6 +105,7 @@ public class Robot implements IRobot {
 	 */
 	public void setMission(IMission mission) {
 		this.mission = mission;
+		notifyAllObservers();
 	}
 
 	/**
@@ -111,6 +114,7 @@ public class Robot implements IRobot {
 	 */
 	public void setStrategy(Strategy strategy) {
 		this.strategy = strategy;
+		notifyAllObservers();
 	}
 
 	/**
@@ -119,12 +123,18 @@ public class Robot implements IRobot {
 	 */
 	public void setPosition(Point position) {
 		this.position = position;
+		notifyAllObservers();
 	}
 
 	/**
 	 * 
 	 */
 	public void notifyAllObservers() {
+		
+		for(Observer observer :observers) {
+			observer.update(null);
+			
+		}
 	}
 
 	/**
@@ -132,6 +142,6 @@ public class Robot implements IRobot {
 	 * @param observer 
 	 */
 	public void attach(Observer observer) {
-		
+		observers.add(observer);
 	}
 };
