@@ -8,10 +8,11 @@ import Controller.IManager;
 import View.IView;
 import java.lang.String;
 import java.util.HashMap;
+import project.Point;
 
 // Manual imports
 import java.awt.Point;
-import java.util.List;
+
 // End of manual imports
 
 /************************************************************/
@@ -30,7 +31,7 @@ public class OperatorView implements IView {
 	/**
 	 * 
 	 */
-	private HashMap<String, List<Point>> missions;
+	private HashMap<String, String> missions;
 
 	/**
 	 * 
@@ -56,15 +57,6 @@ public class OperatorView implements IView {
 
 	/**
 	 * 
-	 * @param robot 
-	 * @param x 
-	 * @param y 
-	 */
-	public void updatePosition(String robot, int x, int y) {
-	}
-
-	/**
-	 * 
 	 */
 	public void updateView() {
 	}
@@ -75,5 +67,13 @@ public class OperatorView implements IView {
 	 * @param state 
 	 */
 	public void updateState(String robot, String state) {
+	}
+
+	/**
+	 * 
+	 * @param robot 
+	 * @param point 
+	 */
+	public void updatePosition(String robot, Point point) {
 	}
 };

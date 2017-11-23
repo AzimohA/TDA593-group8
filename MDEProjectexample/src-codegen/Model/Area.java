@@ -4,9 +4,9 @@
 
 package Model;
 
-import java.awt.Point;
 import java.lang.String;
 import project.LocationController;
+import project.Point;
 
 /************************************************************/
 /**
@@ -28,7 +28,7 @@ public class Area {
 	/**
 	 * 
 	 */
-	public LocationController locationcontroller;
+	private LocationController locationcontroller;
 
 	/**
 	 * 
