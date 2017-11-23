@@ -5,13 +5,14 @@
 package Model;
 
 import Controller.Observer;
+import Model.Area;
 import Model.IMission;
 import Model.IRobot;
 import Model.State;
 import Model.Strategy;
-import java.awt.Point;
 import java.lang.String;
 import java.util.List;
+import project.Point;
 
 /************************************************************/
 /**
@@ -42,6 +43,10 @@ public class Robot implements IRobot {
 	 * 
 	 */
 	private List<Observer> observers;
+	/**
+				 * 
+				 */
+				public List<Area> list<area>;
 
 	/**
 	 * 

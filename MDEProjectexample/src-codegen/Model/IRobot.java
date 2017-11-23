@@ -7,8 +7,8 @@ package Model;
 import Controller.Observer;
 import Model.IMission;
 import Model.Strategy;
-import java.awt.Point;
 import java.lang.String;
+import project.Point;
 
 /************************************************************/
 /**
