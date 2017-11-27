@@ -52,17 +52,25 @@ public class OperatorView extends JFrame implements IView {
 		JPanel panel = new JPanel();
 		getContentPane().add(panel);
 		
+		//List of robots -----
 		DefaultListModel<String> rList = new DefaultListModel<>();
 		for (String robot : robots.keySet()) {
 			rList.addElement(robot);
 		}
-		JList<String> list = new JList<>(rList);
-		JScrollPane scroll = new JScrollPane(list);
-		panel.add(scroll);
+		JList<String> robotList = new JList<>(rList);
+		JScrollPane robotScrollPane = new JScrollPane(robotList);
+		panel.add(robotScrollPane);
+		//---- end of list of robots
 		
-		JList<String> missionList = new JList<>();
-		JScrollPane scrollPane = new JScrollPane();
-		panel.add(scrollPane);
+		//List of missions ----
+		DefaultListModel<String> mList = new DefaultListModel<>();
+		for (String mission : missions) {
+			mList.addElement(mission);
+		}
+		JList<String> missionList = new JList<>(mList);
+		JScrollPane missionScrollPane = new JScrollPane(missionList);
+		panel.add(missionScrollPane);
+		//---- end of list of missions
 		
 		JButton assignButton = new JButton("Assign");
 		panel.add(assignButton);
