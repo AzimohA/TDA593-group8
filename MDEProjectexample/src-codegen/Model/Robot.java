@@ -53,6 +53,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public Point getPosition() {
+		return null;
 	}
 
 	/**
@@ -60,6 +61,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public Strategy getStrategy() {
+		return null;
 	}
 
 	/**
@@ -73,6 +75,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public String getState() {
+		return null;
 	}
 
 	/**
@@ -80,6 +83,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public IMission getMission() {
+		return null;
 	}
 
 	/**
@@ -87,6 +91,7 @@ public class Robot implements IRobot {
 	 * @return 
 	 */
 	public String getName() {
+		return null;
 	}
 
 	/**

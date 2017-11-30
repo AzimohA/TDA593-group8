@@ -35,6 +35,7 @@ public class Area {
 	 * @return 
 	 */
 	public Point getCenterPoint() {
+		return null;
 	}
 
 	/**
@@ -42,6 +43,7 @@ public class Area {
 	 * @return 
 	 */
 	public int getRadius() {
+		return 0;
 	}
 
 	/**
@@ -49,6 +51,7 @@ public class Area {
 	 * @return 
 	 */
 	public String getName() {
+		return null;
 	}
 
 	/**
@@ -56,5 +59,6 @@ public class Area {
 	 * @return 
 	 */
 	public LocationController getLocationController() {
+		return null;
 	}
 };

@@ -35,6 +35,7 @@ public class Mission implements IMission {
 	public Mission(String name, List<Point> points) {
 		this.name = name;
 		this.points = points;
+		
 	}
 	
 	public List<Point> getPoints() {

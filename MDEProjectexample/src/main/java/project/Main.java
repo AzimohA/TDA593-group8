@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import Controller.Manager;
 import Model.Mission;
+
 import project.AbstractSimulatorMonitor;
 import project.Point;
 import simbad.sim.AbstractWall;
@@ -17,11 +17,6 @@ import simbad.sim.HorizontalBoundary;
 import simbad.sim.HorizontalWall;
 import simbad.sim.VerticalBoundary;
 import simbad.sim.VerticalWall;
-
-
-
-
-
 
 public class Main {
 
@@ -91,7 +86,7 @@ public class Main {
 		Point room3 = new Point (3.5, -3.5);
 		Point room4 = new Point (3.5, 3.5);
 		
-		java.util.List<Point> missionRobot1 = new ArrayList();
+		ArrayList<Point> missionRobot1 = new ArrayList();
 		missionRobot1.add(room1);
 		missionRobot1.add(room2);
 		missionRobot1.add(new Point(-3.5, -9));
