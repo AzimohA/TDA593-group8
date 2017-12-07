@@ -16,4 +16,6 @@ public interface Observer {
 	 * @param robot 
 	 */
 	public void update(IRobot robot);
+	
+
 };
