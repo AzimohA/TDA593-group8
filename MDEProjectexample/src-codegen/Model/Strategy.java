@@ -18,13 +18,15 @@ import project.Point;
 public class Strategy {
 	/**
 	 * 
+	 */
+	private List<Point> points;
+
+	/**
+	 * 
 	 * @param mission 
 	 * @return 
 	 */
-	public List<Point> getStrategy(IMission mission) {
-		List<Point> strategy = calculateStrategy(mission);
-		//returns the order of the list because now it will get the right list
-		return strategy; 
+	public Model.Strategy getStrategy(IMission mission) {
 	}
 
 	/**
@@ -33,7 +35,20 @@ public class Strategy {
 	 * @return 
 	 */
 	private List<Point> calculateStrategy(IMission mission) {
-		return mission.getPoints();
 		
+	}
+	
+	//Kalla på denna metod när du är framme, sen sover den eller whatever.
+	/**
+	 * 
+	 */
+	public void isAtDestination() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public List<Point> getPoints() {
 	}
 };

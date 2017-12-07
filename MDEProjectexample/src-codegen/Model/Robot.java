@@ -10,6 +10,8 @@ import Model.IRobot;
 import Model.State;
 import Model.Strategy;
 import project.Point;
+import project.RobotAvatar;
+
 import java.lang.String;
 import java.util.List;
 import Controller.Observer;
@@ -26,6 +28,7 @@ public class Robot implements IRobot,Observable {
 		this.strategy = strategy;
 		this.state = state;
 		this.mission = mission;
+		this.robotAvatar = new RobotAvatar(position, name);
 	}
 	/**
 	 * 
@@ -59,6 +62,8 @@ public class Robot implements IRobot,Observable {
 	 * 
 	 */
 	private int reward;
+	
+	private RobotAvatar robotAvatar;
 
 
 	/**
@@ -159,6 +164,22 @@ public class Robot implements IRobot,Observable {
 	@Override
 	public void addReward(int reward) {
 		this.reward += reward;
+		
+	}
+	
+	/**
+	 * 
+	 * @return 
+	 */
+	public Strategy useStrategy() {
+		return null;
+	}
+	
+	/**
+	 * 
+	 */
+	public RobotAvatar getRobot() {
+		return robotAvatar;
 		
 	}
 

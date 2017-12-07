@@ -9,6 +9,7 @@ import Model.IMission;
 import Model.Strategy;
 import java.lang.String;
 import project.Point;
+import project.RobotAvatar;
 
 /************************************************************/
 /**
@@ -62,4 +63,6 @@ public interface IRobot {
 	 * @param reward 
 	 */
 	public void addReward(int reward);
+	
+	public RobotAvatar getRobot();
 };

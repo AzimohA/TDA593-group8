@@ -43,7 +43,7 @@ public class Navigate implements Observer {
 	 * 
 	 */
 	public void move() throws InterruptedException {
-		List<Point> strategy = (List<Point>) robot.getStrategy(); //Wrong type of Point is returned
+		List<Point> strategy = robot.getStrategy().getPoints(); //Wrong type of Point is returned
 		
 		List<Area> areaOrder = new LinkedList<Area>();
 		for(Point point : strategy) {
@@ -57,7 +57,7 @@ public class Navigate implements Observer {
 			while( ! (robot.getRobot().isAtPosition(point)) {
 				
 			}
-			Thread.sleep(2000);
+			robot.getStrategy().isAtDestination();
 		}
 		
 		for(Area area : areaOrder) {
