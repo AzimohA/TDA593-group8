@@ -35,8 +35,10 @@ public class Strategy {
 	 * @return 
 	 */
 	private List<Point> calculateStrategy(IMission mission) {
+		
 	}
-
+	
+	//Kalla på denna metod när du är framme, sen sover den eller whatever.
 	/**
 	 * 
 	 */
