@@ -9,7 +9,7 @@ import Model.IMission;
 import Model.IRobot;
 import Model.State;
 import Model.Strategy;
-import java.awt.Point;
+import project.Point;
 import java.lang.String;
 import java.util.List;
 import Controller.Observer;
@@ -18,7 +18,7 @@ import Controller.Observer;
 /**
  * 
  */
-public class Robot implements IRobot {
+public class Robot implements IRobot,Observable {
 	
 	public Robot(String name, Point position, Strategy strategy, State state, IMission mission) {
 		this.name = name;
@@ -51,6 +51,15 @@ public class Robot implements IRobot {
 	 * 
 	 */
 	private List<Observer> observers;
+	/**
+	 * 
+	 */
+	public List<Area> areas;
+	/**
+	 * 
+	 */
+	private int reward;
+
 
 	/**
 	 * 
@@ -144,6 +153,13 @@ public class Robot implements IRobot {
 	 */
 	public void attach(Observer observer) {
 		observers.add(observer);
+	}
+
+
+	@Override
+	public void addReward(int reward) {
+		this.reward += reward;
+		
 	}
 
 };

@@ -16,5 +16,6 @@ public class ViewFactory {
 	 * @return 
 	 */
 	public IView getView() {
+		return null;
 	}
 };

@@ -8,7 +8,7 @@ import Model.IMission;
 import java.util.List;
 
 // Manual imports
-import java.awt.Point;
+import project.Point;
 // End of manual imports
 
 /************************************************************/
@@ -22,6 +22,9 @@ public class Strategy {
 	 * @return 
 	 */
 	public List<Point> getStrategy(IMission mission) {
+		List<Point> strategy = calculateStrategy(mission);
+		//returns the order of the list because now it will get the right list
+		return strategy; 
 	}
 
 	/**
@@ -30,5 +33,7 @@ public class Strategy {
 	 * @return 
 	 */
 	private List<Point> calculateStrategy(IMission mission) {
+		return mission.getPoints();
+		
 	}
 };
