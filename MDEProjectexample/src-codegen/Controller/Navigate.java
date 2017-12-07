@@ -31,7 +31,12 @@ public class Navigate implements Observer {
 	 * 
 	 */
 	private List<Area> areas;
-
+	
+	public Navigate(IRobot robot, List<Area> areas) {
+		this.robot = robot;
+		this.areas = areas;
+	}
+	
 	/**
 	 * 
 	 */
@@ -42,7 +47,7 @@ public class Navigate implements Observer {
 	 * @throws InterruptedException 
 	 * 
 	 */
-	public void move() throws InterruptedException {
+	public void move() {
 		List<Point> strategy = robot.getStrategy().getPoints(); //Wrong type of Point is returned
 		
 		List<Area> areaOrder = new LinkedList<Area>();
@@ -94,6 +99,8 @@ public class Navigate implements Observer {
 	 * @param robot 
 	 */
 	public void update(IRobot robot) {
+		move();
+		
 	}
 
 	/**
