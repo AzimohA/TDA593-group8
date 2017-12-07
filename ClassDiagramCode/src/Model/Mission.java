@@ -31,5 +31,6 @@ public class Mission implements IMission {
 	 * @return 
 	 */
 	public List<Point> getPoints() {
+		return this.points;
 	}
 };

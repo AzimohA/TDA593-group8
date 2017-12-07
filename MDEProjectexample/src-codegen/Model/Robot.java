@@ -4,7 +4,7 @@
 
 package Model;
 
-import Controller.Observer;
+
 import Model.IMission;
 import Model.IRobot;
 import Model.State;
@@ -12,6 +12,7 @@ import Model.Strategy;
 import java.awt.Point;
 import java.lang.String;
 import java.util.List;
+import Controller.Observer;
 
 /************************************************************/
 /**
@@ -134,4 +135,5 @@ public class Robot implements IRobot {
 	public void attach(Observer observer) {
 		
 	}
+
 };
