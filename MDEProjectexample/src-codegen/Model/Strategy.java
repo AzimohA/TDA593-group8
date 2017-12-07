@@ -49,10 +49,4 @@ public class Strategy {
 	 */
 	public List<Point> getPoints() {
 	}
-
-	/**
-	 * 
-	 */
-	public void isInNewRoom() {
-	}
 };
