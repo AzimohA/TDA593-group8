@@ -14,6 +14,6 @@ public class StopStrategy extends Strategy {
 	/**
 	 * 
 	 */
-	public void isInNewRoom() {
+	public void isAtDestination() {
 	}
 };

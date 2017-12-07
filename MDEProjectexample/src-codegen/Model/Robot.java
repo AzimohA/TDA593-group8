@@ -116,19 +116,6 @@ public class Robot implements IRobot, Observable {
 
 	/**
 	 * 
-	 */
-	public void notifyAllObservers() {
-	}
-
-	/**
-	 * 
-	 * @param observer 
-	 */
-	public void attach(Observer observer) {
-	}
-
-	/**
-	 * 
 	 * @return 
 	 */
 	public Strategy useStrategy() {
@@ -136,41 +123,14 @@ public class Robot implements IRobot, Observable {
 
 	/**
 	 * 
-	 * @param strategy 
-	 */
-	public void setStrategy(undefined strategy) {
-	}
-
-	/**
-	 * 
-	 * @param observer 
-	 */
-	public void attach(undefined observer) {
-	}
-
-	/**
-	 * 
-	 */
-	public void Operation1() {
-	}
-
-	/**
-	 * 
-	 */
-	public void addReward() {
-	}
-
-	/**
-	 * 
-	 * @param  
-	 */
-	public void addReward(int null) {
-	}
-
-	/**
-	 * 
 	 * @param reward 
 	 */
 	public void addReward(int reward) {
+	}
+
+	/**
+	 * 
+	 */
+	public void getRobot() {
 	}
 };

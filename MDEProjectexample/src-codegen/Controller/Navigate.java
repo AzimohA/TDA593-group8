@@ -46,10 +46,4 @@ public class Navigate implements Observer {
 	 */
 	public void update(IRobot robot) {
 	}
-
-	/**
-	 * 
-	 */
-	public void waitForArrival() {
-	}
 };
