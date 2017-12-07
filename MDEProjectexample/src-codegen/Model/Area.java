@@ -57,4 +57,11 @@ public class Area {
 	 */
 	public LocationController getLocationController() {
 	}
+
+	/**
+	 * 
+	 * @param reward 
+	 */
+	public void getReward(int reward) {
+	}
 };

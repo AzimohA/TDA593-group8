@@ -18,10 +18,15 @@ import project.Point;
 public class Strategy {
 	/**
 	 * 
+	 */
+	private List<Point> points;
+
+	/**
+	 * 
 	 * @param mission 
 	 * @return 
 	 */
-	public List<Point> getStrategy(IMission mission) {
+	public Model.Strategy getStrategy(IMission mission) {
 	}
 
 	/**
@@ -30,5 +35,24 @@ public class Strategy {
 	 * @return 
 	 */
 	private List<Point> calculateStrategy(IMission mission) {
+	}
+
+	/**
+	 * 
+	 */
+	public void isAtDestination() {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public List<Point> getPoints() {
+	}
+
+	/**
+	 * 
+	 */
+	public void isInNewRoom() {
 	}
 };

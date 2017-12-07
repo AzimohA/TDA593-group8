@@ -4,27 +4,21 @@
 
 package Model;
 
-import java.lang.String;
-import java.util.List;
-
-// Manual imports
-import project.Point;
-// End of manual imports
+import Controller.Observer;
 
 /************************************************************/
 /**
  * 
  */
-public interface IMission {
+public interface Observable {
 	/**
 	 * 
-	 * @return 
 	 */
-	public List<Point> getPoints();
+	public void notifyAllObservers();
 
 	/**
 	 * 
-	 * @return 
+	 * @param observer 
 	 */
-	public String getName();
+	public void attach(Observer observer);
 };

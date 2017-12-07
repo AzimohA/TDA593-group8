@@ -4,27 +4,16 @@
 
 package Model;
 
-import java.lang.String;
-import java.util.List;
-
-// Manual imports
-import project.Point;
-// End of manual imports
+import Model.Strategy;
 
 /************************************************************/
 /**
  * 
  */
-public interface IMission {
+public class StopStrategy extends Strategy {
 	/**
 	 * 
-	 * @return 
 	 */
-	public List<Point> getPoints();
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public String getName();
+	public void isInNewRoom() {
+	}
 };

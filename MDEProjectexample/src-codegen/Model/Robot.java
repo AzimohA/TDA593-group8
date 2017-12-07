@@ -5,9 +5,9 @@
 package Model;
 
 import Controller.Observer;
-import Model.Area;
 import Model.IMission;
 import Model.IRobot;
+import Model.Observable;
 import Model.State;
 import Model.Strategy;
 import java.lang.String;
@@ -18,7 +18,7 @@ import project.Point;
 /**
  * 
  */
-public class Robot implements IRobot {
+public class Robot implements IRobot, Observable {
 	/**
 	 * 
 	 */
@@ -47,6 +47,10 @@ public class Robot implements IRobot {
 	 * 
 	 */
 	public List<Area> areas;
+	/**
+	 * 
+	 */
+	private int reward;
 
 	/**
 	 * 
@@ -121,5 +125,52 @@ public class Robot implements IRobot {
 	 * @param observer 
 	 */
 	public void attach(Observer observer) {
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public Strategy useStrategy() {
+	}
+
+	/**
+	 * 
+	 * @param strategy 
+	 */
+	public void setStrategy(undefined strategy) {
+	}
+
+	/**
+	 * 
+	 * @param observer 
+	 */
+	public void attach(undefined observer) {
+	}
+
+	/**
+	 * 
+	 */
+	public void Operation1() {
+	}
+
+	/**
+	 * 
+	 */
+	public void addReward() {
+	}
+
+	/**
+	 * 
+	 * @param  
+	 */
+	public void addReward(int null) {
+	}
+
+	/**
+	 * 
+	 * @param reward 
+	 */
+	public void addReward(int reward) {
 	}
 };

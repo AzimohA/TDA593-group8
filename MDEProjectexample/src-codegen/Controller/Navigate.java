@@ -37,7 +37,7 @@ public class Navigate implements Observer {
 	/**
 	 * 
 	 */
-	private void move() {
+	public void move() {
 	}
 
 	/**
@@ -45,5 +45,11 @@ public class Navigate implements Observer {
 	 * @param robot 
 	 */
 	public void update(IRobot robot) {
+	}
+
+	/**
+	 * 
+	 */
+	public void waitForArrival() {
 	}
 };

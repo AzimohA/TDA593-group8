@@ -59,18 +59,7 @@ public interface IRobot {
 
 	/**
 	 * 
-	 * @param strategy 
+	 * @param reward 
 	 */
-	public void setStrategy(Strategy strategy);
-
-	/**
-	 * 
-	 */
-	public void notifyAllObservers();
-
-	/**
-	 * 
-	 * @param observer 
-	 */
-	public void attach(Observer observer);
+	public void addReward(int reward);
 };

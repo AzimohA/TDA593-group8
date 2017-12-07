@@ -28,23 +28,12 @@ public class Manager implements IManager {
 	 */
 	private List<IMission> missions;
 
-	public Manager(ArrayList<IMission> missions, ArrayList<IRobot> robots) {
-		this.robots = robots;
-		this.missions = missions;
-	}
-
 	/**
 	 * 
 	 * @param robot 
 	 * @return 
 	 */
-	public IRobot getRobot(String robot) {
-		for(int i = 0; i < robots.size(); i++) {
-			if(robots.get(i).getName().equals(robot)) {
-				return robots.get(i);
-			}
-		}
-		return null;
+	private IRobot getRobot(String robot) {
 	}
 
 	/**
@@ -52,13 +41,7 @@ public class Manager implements IManager {
 	 * @param mission 
 	 * @return 
 	 */
-	public IMission getMission(String mission) {
-		for(int i = 0; i < missions.size(); i++) {
-			if(missions.get(i).getName().equals(mission)) {
-				return missions.get(i);
-			}
-		}
-		return null;
+	private IMission getMission(String mission) {
 	}
 
 	/**
@@ -67,6 +50,12 @@ public class Manager implements IManager {
 	 * @param mission 
 	 */
 	public void assignMission(String robot, String mission) {
-		getRobot(robot).setMission(getMission(mission));
+	}
+
+	/**
+	 * 
+	 * @return 
+	 */
+	public List<String> getMissions() {
 	}
 };
