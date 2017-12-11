@@ -13,6 +13,7 @@ import Model.Strategy;
 import java.lang.String;
 import java.util.List;
 import project.Point;
+import project.RobotAvatar;
 
 /************************************************************/
 /**
@@ -51,6 +52,10 @@ public class Robot implements IRobot, Observable {
 	 * 
 	 */
 	private int reward;
+	/**
+	 * 
+	 */
+	public RobotAvatar robotavatar;
 
 	/**
 	 * 
@@ -116,9 +121,15 @@ public class Robot implements IRobot, Observable {
 
 	/**
 	 * 
-	 * @return 
 	 */
-	public Strategy useStrategy() {
+	public void notifyAllObservers() {
+	}
+
+	/**
+	 * 
+	 * @param observer 
+	 */
+	public void attach(Observer observer) {
 	}
 
 	/**
@@ -127,10 +138,11 @@ public class Robot implements IRobot, Observable {
 	 */
 	public void addReward(int reward) {
 	}
-
+	
 	/**
 	 * 
+	 * @return 
 	 */
-	public void getRobot() {
+	public RobotAvatar getRobot() {
 	}
 };
