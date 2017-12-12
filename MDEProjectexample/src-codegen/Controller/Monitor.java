@@ -7,12 +7,16 @@ package Controller;
 import Controller.Observer;
 import Controller.ViewFactory;
 import Model.IRobot;
+import project.AbstractRobotSimulator;
+import project.AbstractSimulatorMonitor;
+import project.RobotAvatar;
+import project.SimulatorMonitor;
 
 /************************************************************/
 /**
  * 
  */
-public class Monitor implements Observer {
+public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Observer {
 	
 	/**
 	 * 
@@ -20,6 +24,7 @@ public class Monitor implements Observer {
 	private IRobot robot;
 	
 	public Monitor(IRobot robot) {
+		super();
 		this.robot = robot;
 		
 	}
@@ -33,6 +38,7 @@ public class Monitor implements Observer {
 	 * @param robot 
 	 */
 	private void updateState(IRobot robot) {
+		this.robot.setState(robot.getState());
 	}
 
 	/**
@@ -60,6 +66,13 @@ public class Monitor implements Observer {
 	 * @param robot 
 	 */
 	public void update(IRobot robot) {
+		
+	}
+
+
+	@Override
+	public void update(RobotAvatar arg0) {
+		
 		
 	}
 

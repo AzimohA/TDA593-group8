@@ -65,4 +65,6 @@ public interface IRobot {
 	public void addReward(int reward);
 	
 	public RobotAvatar getRobot();
+	
+	public void setState(State state);
 };

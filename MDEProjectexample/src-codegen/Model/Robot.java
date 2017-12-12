@@ -9,6 +9,7 @@ import Model.IMission;
 import Model.IRobot;
 import Model.State;
 import Model.Strategy;
+import project.AbstractRobotSimulator;
 import project.Point;
 import project.RobotAvatar;
 
@@ -71,7 +72,7 @@ public class Robot implements IRobot,Observable {
 	 * @return 
 	 */
 	public Point getPosition() {
-		return this.position;
+		return this.robotAvatar.getPosition();
 		
 	}
 
@@ -110,7 +111,7 @@ public class Robot implements IRobot,Observable {
 	 * @return 
 	 */
 	public String getName() {
-		return this.name;
+		return this.robotAvatar.getName();
 		
 	}
 
@@ -137,7 +138,7 @@ public class Robot implements IRobot,Observable {
 	 * @param position 
 	 */
 	public void setPosition(Point position) {
-		this.position = position;
+		this.robotAvatar.setDestination(position);
 		notifyAllObservers();
 	}
 
@@ -147,7 +148,7 @@ public class Robot implements IRobot,Observable {
 	public void notifyAllObservers() {
 		
 		for(Observer observer :observers) {
-			observer.update(null);
+			observer.update(this);
 			
 		}
 	}
@@ -181,6 +182,9 @@ public class Robot implements IRobot,Observable {
 	public RobotAvatar getRobot() {
 		return robotAvatar;
 		
+	}
+	public void setState(State state) {
+		this.state = state;
 	}
 
 };

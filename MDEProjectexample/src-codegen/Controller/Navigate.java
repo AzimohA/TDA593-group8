@@ -31,7 +31,12 @@ public class Navigate implements Observer {
 	 * 
 	 */
 	private List<Area> areas;
-
+	
+	public Navigate(IRobot robot, List<Area> areas) {
+		this.robot = robot;
+		this.areas = areas;
+	}
+	
 	/**
 	 * 
 	 */
@@ -54,7 +59,7 @@ public class Navigate implements Observer {
 		
 		for(Point point : strategy) {
 			robot.setPosition(point);
-			while( ! (robot.getRobot().isAtPosition(point)) {
+			while( ! (robot.getRobot().isAtPosition(point))) {
 				
 			}
 			robot.getStrategy().isAtDestination();
@@ -94,6 +99,8 @@ public class Navigate implements Observer {
 	 * @param robot 
 	 */
 	public void update(IRobot robot) {
+		move();
+		
 	}
 
 	/**
