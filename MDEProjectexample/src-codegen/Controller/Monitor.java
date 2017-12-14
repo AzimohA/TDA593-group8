@@ -69,9 +69,8 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	 * @param robot 
 	 */
 	private void updatePosition(IRobot robot) {
-		for (Robot rob : robotAvatarModels.keySet()) {
-			if 
-		}
+		RobotAvatar robotAvatar = robotAvatarModels.get(robot);
+		robotAvatar.setDestination(robot.getPosition());
 	}
 
 	/**
@@ -101,7 +100,7 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 		Mission m = new Mission(robAvatar.getName(),null);
 		
 		
-		return new Robot(robAvatar.getName(),robAvatar.getPosition(),s,State.OKAY,m);
+		return new Robot(robAvatar.getName(), robAvatar.getPosition(), s, State.OKAY, m);
 	}
 
 
