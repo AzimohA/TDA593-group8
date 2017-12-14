@@ -22,6 +22,41 @@ import Controller.Observer;
  * 
  */
 public class Robot implements IRobot,Observable {
+	/**
+	 * 
+	 */
+	private String name;
+	
+	/**
+	 * 
+	 */
+	private Point position;
+	
+	/**
+	 * 
+	 */
+	private Strategy strategy;
+	
+	/**
+	 * 
+	 */
+	private State state;
+	
+	/**
+	 * 
+	 */
+	private IMission mission;
+	
+	/**
+	 * 
+	 */
+	private List<Observer> observers;
+	
+	/**
+	 * 
+	 */
+	private int reward;
+
 	
 	public Robot(String name, Point position, Strategy strategy, State state, IMission mission) {
 		this.name = name;
@@ -29,43 +64,7 @@ public class Robot implements IRobot,Observable {
 		this.strategy = strategy;
 		this.state = state;
 		this.mission = mission;
-		this.robotAvatar = new RobotAvatar(position, name);
 	}
-	/**
-	 * 
-	 */
-	private String name;
-	/**
-	 * 
-	 */
-	private Point position;
-	/**
-	 * 
-	 */
-	private Strategy strategy;
-	/**
-	 * 
-	 */
-	private State state;
-	/**
-	 * 
-	 */
-	private IMission mission;
-	/**
-	 * 
-	 */
-	private List<Observer> observers;
-	/**
-	 * 
-	 */
-	public List<Area> areas;
-	/**
-	 * 
-	 */
-	private int reward;
-	
-	private RobotAvatar robotAvatar;
-
 
 	/**
 	 * 

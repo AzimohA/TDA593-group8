@@ -7,9 +7,8 @@ import simbad.sim.EnvironmentDescription;
 public abstract class Environment extends EnvironmentDescription {
 	protected List<Area> areas;
 	
-	public Environment(List<Area> areas) {
+	public Environment() {
 		super();
-		this.areas = areas;
 	}
 	
 	public List<Area> getAreas() {
@@ -17,5 +16,7 @@ public abstract class Environment extends EnvironmentDescription {
 	}
 	
 	public abstract void drawMap();
+	
+	public abstract List<Area> defineAreas();
 
 }

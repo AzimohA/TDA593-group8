@@ -15,7 +15,7 @@ import project.Point;
 /**
  * 
  */
-public class Strategy {
+public abstract class Strategy {
 	/**
 	 * 
 	 */
@@ -43,8 +43,7 @@ public class Strategy {
 	/**
 	 * 
 	 */
-	public void isAtDestination() {
-	}
+	public abstract void isAtDestination();
 
 	/**
 	 * 

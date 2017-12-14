@@ -28,14 +28,24 @@ public class Area {
 	/**
 	 * 
 	 */
-	private LocationController locationcontroller;
+	private LocationController locationController;
+	
+	private int reward;
+	
+	public Area(Point centerPoint, int radius, String name, int reward, LocationController locationcontroller) {
+		this.centerPoint = centerPoint;
+		this.radius = radius;
+		this.name = name;
+		this.reward = reward;
+		this.locationController =  locationcontroller;
+	}
 
 	/**
 	 * 
 	 * @return 
 	 */
 	public Point getCenterPoint() {
-		return null;
+		return centerPoint;
 	}
 
 	/**
@@ -43,7 +53,7 @@ public class Area {
 	 * @return 
 	 */
 	public int getRadius() {
-		return 0;
+		return radius;
 	}
 
 	/**
@@ -51,7 +61,7 @@ public class Area {
 	 * @return 
 	 */
 	public String getName() {
-		return null;
+		return name;
 	}
 
 	/**
@@ -59,6 +69,10 @@ public class Area {
 	 * @return 
 	 */
 	public LocationController getLocationController() {
-		return null;
+		return locationController;
+	}
+	
+	public int getReward() {
+		return this.reward;
 	}
 };

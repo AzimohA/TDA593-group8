@@ -16,6 +16,7 @@ import project.RobotAvatar;
  * 
  */
 public interface IRobot {
+	
 	/**
 	 * 
 	 * @return 

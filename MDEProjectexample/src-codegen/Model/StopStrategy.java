@@ -16,4 +16,13 @@ public class StopStrategy extends Strategy {
 	 */
 	public void isInNewRoom() {
 	}
+
+	@Override
+	public void isAtDestination() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 };
