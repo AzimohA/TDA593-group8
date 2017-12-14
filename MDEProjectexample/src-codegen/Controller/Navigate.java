@@ -97,9 +97,15 @@ public class Navigate implements Observer {
 	/**
 	 * 
 	 * @param robot 
+	 * @throws InterruptedException 
 	 */
 	public void update(IRobot robot) {
-		move();
+		try {
+			move();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

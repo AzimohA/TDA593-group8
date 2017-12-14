@@ -27,6 +27,7 @@ public class Strategy {
 	 * @return 
 	 */
 	public Model.Strategy getStrategy(IMission mission) {
+		return this;
 	}
 
 	/**
@@ -35,7 +36,7 @@ public class Strategy {
 	 * @return 
 	 */
 	private List<Point> calculateStrategy(IMission mission) {
-		
+		return points;
 	}
 	
 	//Kalla på denna metod när du är framme, sen sover den eller whatever.
@@ -50,5 +51,6 @@ public class Strategy {
 	 * @return 
 	 */
 	public List<Point> getPoints() {
+		return points;
 	}
 };

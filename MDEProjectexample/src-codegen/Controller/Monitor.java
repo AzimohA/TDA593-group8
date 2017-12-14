@@ -4,8 +4,11 @@
 
 package Controller;
 
+import java.util.Set;
+
 import Controller.Observer;
 import Controller.ViewFactory;
+import Model.Environment;
 import Model.IRobot;
 import project.AbstractRobotSimulator;
 import project.AbstractSimulatorMonitor;
@@ -23,9 +26,8 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	 */
 	private IRobot robot;
 	
-	public Monitor(IRobot robot) {
-		super();
-		this.robot = robot;
+	public Monitor(Set<RobotAvatar> robotAvatars, Environment environment) {
+		super(robotAvatars, environment);
 		
 	}
 	/**
@@ -38,7 +40,7 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	 * @param robot 
 	 */
 	private void updateState(IRobot robot) {
-		this.robot.setState(robot.getState());
+		//this.robot.setState(robot.getState());
 	}
 
 	/**

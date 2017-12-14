@@ -1,15 +1,21 @@
 package Model;
 
+import java.util.List;
+
 import simbad.sim.EnvironmentDescription;
 
-public class Environment extends EnvironmentDescription {
+public abstract class Environment extends EnvironmentDescription {
+	protected List<Area> areas;
 	
-	public Environment(ArrayList<Areas> areas) {
+	public Environment(List<Area> areas) {
 		super();
+		this.areas = areas;
 	}
 	
-	public void getAreas() {
-		this.
+	public List<Area> getAreas() {
+		return areas;
 	}
+	
+	public abstract void drawMap();
 
 }

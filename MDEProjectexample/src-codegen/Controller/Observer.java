@@ -14,6 +14,7 @@ public interface Observer {
 	/**
 	 * 
 	 * @param robot 
+	 * @throws InterruptedException 
 	 */
 	public void update(IRobot robot);
 	

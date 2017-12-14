@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.util.HashSet;
 import java.util.Set;
 
+import Controller.Monitor;
+import Model.*;
 import project.AbstractSimulatorMonitor;
 import project.Point;
 import simbad.sim.AbstractWall;
@@ -17,8 +19,7 @@ import simbad.sim.VerticalWall;
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
-		
-		
+	
 		EnvironmentDescription e = new EnvironmentDescription();
 
 		Color cGray = Color.GRAY;
@@ -75,6 +76,9 @@ public class Main {
 
         AbstractWall underMiddleWall = new VerticalWall(0f, -5f, -7f, e, cBlue);
 
+        
+		Environment testEnvironment = new UniversityEnvironment(null);
+		
 		Set<RobotAvatar> robots = new HashSet<>();
 
 		RobotAvatar robot1 = new RobotAvatar(new Point(1, 1), "Robot 1");
