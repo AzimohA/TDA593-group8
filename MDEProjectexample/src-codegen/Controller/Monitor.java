@@ -4,12 +4,17 @@
 
 package Controller;
 
+import java.util.HashMap;
 import java.util.Set;
 
 import Controller.Observer;
 import Controller.ViewFactory;
 import Model.Environment;
 import Model.IRobot;
+import Model.Mission;
+import Model.Robot;
+import Model.State;
+import Model.Strategy;
 import project.AbstractRobotSimulator;
 import project.AbstractSimulatorMonitor;
 import project.RobotAvatar;
@@ -25,9 +30,12 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	 * 
 	 */
 	private IRobot robot;
+	private HashMap <Robot,RobotAvatar> robotAvatarModels;
 	
 	public Monitor(Set<RobotAvatar> robotAvatars, Environment environment) {
 		super(robotAvatars, environment);
+		this.robotAvatarModels = new HashMap<Robot, RobotAvatar>();
+		setUpRobotAvatars(robotAvatars);
 		
 	}
 	/**
@@ -39,6 +47,13 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	 * 
 	 * @param robot 
 	 */
+	
+	private void setUpRobotAvatars(Set<RobotAvatar> robotAvatars) {
+		for (RobotAvatar rob:robotAvatars) {
+			this.robotAvatarModels.put(getRobotAvatarParams(rob), rob);
+		}
+		
+	}
 	private void updateState(IRobot robot) {
 		//this.robot.setState(robot.getState());
 	}
@@ -54,6 +69,9 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	 * @param robot 
 	 */
 	private void updatePosition(IRobot robot) {
+		for (Robot rob : robotAvatarModels.keySet()) {
+			if 
+		}
 	}
 
 	/**
@@ -76,6 +94,14 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	public void update(RobotAvatar arg0) {
 		
 		
+	}
+	
+	private Robot getRobotAvatarParams(RobotAvatar robAvatar) {
+		Strategy s = new Strategy();
+		Mission m = new Mission(robAvatar.getName(),null);
+		
+		
+		return new Robot(robAvatar.getName(),robAvatar.getPosition(),s,State.OKAY,m);
 	}
 
 
