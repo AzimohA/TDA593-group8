@@ -75,7 +75,7 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	/**
 	 * 
 	 */
-	private void updateView() {
+	private void updateView(IRobot robot) {
 	}
 
 	/**
@@ -101,18 +101,13 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	private void updateMission(IRobot robot) {
 	}
 
-	/**
-	 * 
-	 * @param robot 
-	 */
-	public void update(IRobot robot) {
-		
-	}
-
 
 	@Override
-	public void update(RobotAvatar arg0) {
-		
+	public void update(IRobot robot) {
+		updateState(robot);
+		updateView(robot);
+		updatePosition(robot);
+		updateMission(robot);
 		
 	}
 	
@@ -123,7 +118,6 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 		
 		return new Robot(robAvatar.getName(), robAvatar.getPosition(), strategy, State.OKAY, mission, this); //robot probably doesn't need strategy or mission, as navigate keeps track of these
 	}
-
 
 	
 };

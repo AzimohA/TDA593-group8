@@ -75,7 +75,7 @@ public class Robot implements IRobot,Observable {
 	 * 
 	 * @return 
 	 */
-	public Boolean isAtPosition(Point point) {
+	public boolean isAtPosition(Point point) {
 		return monitor.isAtPosition(this, point);
 		
 	}
