@@ -19,10 +19,14 @@ public abstract class Strategy {
 	/**
 	 * 
 	 */
-	private List<Point> points;
+	protected List<Point> points;
+	
+	public Strategy(IMission mission) {
+		points = mission.getPoints();
+	}
 
 	/**
-	 * 
+	 * What is this even needed for?
 	 * @param mission 
 	 * @return 
 	 */

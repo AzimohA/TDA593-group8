@@ -11,6 +11,11 @@ import Model.Strategy;
  * 
  */
 public class StopStrategy extends Strategy {
+	
+	
+	public StopStrategy(IMission mission) {
+		super(mission);
+	}
 	/**
 	 * 
 	 */

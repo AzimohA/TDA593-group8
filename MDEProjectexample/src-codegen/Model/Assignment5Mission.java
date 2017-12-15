@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /**
  * 
  */
-public class Mission implements IMission {
+public class Assignment5Mission implements IMission {
 	/**
 	 * 
 	 */
@@ -32,9 +32,9 @@ public class Mission implements IMission {
 	 * @return 
 	 */
 	
-	public Mission(String name, List<Point> points) {
+	public Assignment5Mission(String name, List<Point> points) {
 		this.name = name;
-		this.points = points;
+		this.points = null; //Change to list of points that allows for mission 5 to be completed
 		
 	}
 	

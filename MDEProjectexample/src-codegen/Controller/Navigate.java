@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 
  */
-public class Navigate implements Observer {
+public class Navigate implements Observer, Runnable {
 	
 	/**
 	 * 
@@ -114,5 +114,16 @@ public class Navigate implements Observer {
 	 * 
 	 */
 	public void waitForArrival() {
+	}
+
+	@Override
+	public void run() {
+		try {
+			move();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 };

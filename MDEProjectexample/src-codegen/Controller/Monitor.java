@@ -5,15 +5,20 @@
 package Controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 import Controller.Observer;
 import Controller.ViewFactory;
+import Model.Area;
+import Model.Assignment5Mission;
 import Model.Environment;
+import Model.IMission;
 import Model.IRobot;
 import Model.Mission;
 import Model.Robot;
 import Model.State;
+import Model.StopStrategy;
 import Model.Strategy;
 import project.AbstractRobotSimulator;
 import project.AbstractSimulatorMonitor;
@@ -31,9 +36,11 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	 */
 	private IRobot robot;
 	private HashMap <Robot,RobotAvatar> robotAvatarModels;
+	Environment environment;
 	
 	public Monitor(Set<RobotAvatar> robotAvatars, Environment environment) {
 		super(robotAvatars, environment);
+		this.environment = environment;
 		this.robotAvatarModels = new HashMap<Robot, RobotAvatar>();
 		setUpRobotAvatars(robotAvatars);
 		
@@ -50,10 +57,18 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	
 	private void setUpRobotAvatars(Set<RobotAvatar> robotAvatars) {
 		for (RobotAvatar rob:robotAvatars) {
-			this.robotAvatarModels.put(getRobotAvatarParams(rob), rob);
+			IRobot modelRobot = getRobotAvatarParams(rob);
+			this.robotAvatarModels.put((Robot) modelRobot, rob);
+			createNavigate(robot, environment.getAreas());
 		}
 		
 	}
+	
+	private void createNavigate(IRobot robot, List<Area> area) {
+		//Must create threads to run move
+		new Thread(new Navigate(robot, area)).start();
+	}
+	
 	private void updateState(IRobot robot) {
 		//this.robot.setState(robot.getState());
 	}
@@ -96,11 +111,11 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	}
 	
 	private Robot getRobotAvatarParams(RobotAvatar robAvatar) {
-		Strategy s = new Strategy();
-		Mission m = new Mission(robAvatar.getName(),null);
+		IMission mission = new Assignment5Mission(robAvatar.getName(),null); //HARDCODE
+		Strategy strategy = new StopStrategy(mission); //HARDCODE
 		
 		
-		return new Robot(robAvatar.getName(), robAvatar.getPosition(), s, State.OKAY, m);
+		return new Robot(robAvatar.getName(), robAvatar.getPosition(), strategy, State.OKAY, mission); //robot probably doesn't need strategy or mission, as navigate keeps track of these
 	}
 
 
