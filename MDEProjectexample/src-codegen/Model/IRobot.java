@@ -68,4 +68,6 @@ public interface IRobot {
 	public RobotAvatar getRobot();
 	
 	public void setState(State state);
+
+	public boolean isAtPosition(Point point);
 };

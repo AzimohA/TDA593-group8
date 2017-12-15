@@ -15,6 +15,8 @@ import project.RobotAvatar;
 
 import java.lang.String;
 import java.util.List;
+
+import Controller.Monitor;
 import Controller.Observer;
 
 /************************************************************/
@@ -26,6 +28,8 @@ public class Robot implements IRobot,Observable {
 	 * 
 	 */
 	private String name;
+	
+	private Monitor monitor; //Bad coding, but necessary solution to find current position of RobotAvatar....
 	
 	/**
 	 * 
@@ -55,23 +59,24 @@ public class Robot implements IRobot,Observable {
 	/**
 	 * 
 	 */
-	private int reward;
+	private int totalReward;
 
 	
-	public Robot(String name, Point position, Strategy strategy, State state, IMission mission) {
+	public Robot(String name, Point position, Strategy strategy, State state, IMission mission, Monitor monitor) {
 		this.name = name;
 		this.position = position;
 		this.strategy = strategy;
 		this.state = state;
 		this.mission = mission;
+		this.monitor = monitor;
 	}
 
 	/**
 	 * 
 	 * @return 
 	 */
-	public Point getPosition() {
-		return this.robotAvatar.getPosition();
+	public Boolean isAtPosition(Point point) {
+		return monitor.isAtPosition(this, point);
 		
 	}
 
@@ -137,7 +142,7 @@ public class Robot implements IRobot,Observable {
 	 * @param position 
 	 */
 	public void setPosition(Point position) {
-		this.robotAvatar.setDestination(position);
+		this.position = position;
 		notifyAllObservers();
 	}
 
@@ -175,13 +180,6 @@ public class Robot implements IRobot,Observable {
 		return null;
 	}
 	
-	/**
-	 * 
-	 */
-	public RobotAvatar getRobot() {
-		return robotAvatar;
-		
-	}
 	public void setState(State state) {
 		this.state = state;
 	}

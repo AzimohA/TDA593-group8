@@ -60,7 +60,7 @@ public class Navigate implements Observer, Runnable {
 		
 		for(Point point : strategy) {
 			robot.setPosition(point);
-			while( ! (robot.getRobot().isAtPosition(point))) {
+			while( ! (robot.isAtPosition(point))) {
 				
 			}
 			robot.getStrategy().isAtDestination();

@@ -22,6 +22,7 @@ import Model.StopStrategy;
 import Model.Strategy;
 import project.AbstractRobotSimulator;
 import project.AbstractSimulatorMonitor;
+import project.Point;
 import project.RobotAvatar;
 import project.SimulatorMonitor;
 
@@ -34,6 +35,7 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	/**
 	 * 
 	 */
+	private ViewFactory viewfactory;
 	private IRobot robot;
 	private HashMap <Robot,RobotAvatar> robotAvatarModels;
 	Environment environment;
@@ -45,10 +47,7 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 		setUpRobotAvatars(robotAvatars);
 		
 	}
-	/**
-	 * 
-	 */
-	private ViewFactory viewfactory;
+	
 
 	/**
 	 * 
@@ -87,7 +86,14 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 		RobotAvatar robotAvatar = robotAvatarModels.get(robot);
 		robotAvatar.setDestination(robot.getPosition());
 	}
-
+	
+	/**
+	 * returns true if the current position of the robot is the same as the parameter
+	 */
+	public Boolean isAtPosition(IRobot robot, Point point) {
+		return robotAvatarModels.get(robot).isAtPosition(point);
+	}
+	
 	/**
 	 * 
 	 * @param robot 
@@ -115,7 +121,7 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 		Strategy strategy = new StopStrategy(mission); //HARDCODE
 		
 		
-		return new Robot(robAvatar.getName(), robAvatar.getPosition(), strategy, State.OKAY, mission); //robot probably doesn't need strategy or mission, as navigate keeps track of these
+		return new Robot(robAvatar.getName(), robAvatar.getPosition(), strategy, State.OKAY, mission, this); //robot probably doesn't need strategy or mission, as navigate keeps track of these
 	}
 
 
