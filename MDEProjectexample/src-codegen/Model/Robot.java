@@ -14,6 +14,7 @@ import project.Point;
 import project.RobotAvatar;
 
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 
 import Controller.Monitor;
@@ -69,6 +70,7 @@ public class Robot implements IRobot,Observable {
 		this.state = state;
 		this.mission = mission;
 		this.monitor = monitor;
+		this.observers = new ArrayList<>();
 	}
 
 	/**
@@ -108,15 +110,6 @@ public class Robot implements IRobot,Observable {
 	 */
 	public IMission getMission() {
 		return this.mission;
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public String getName() {
-		return this.robotAvatar.getName();
-		
 	}
 
 	/**
@@ -168,7 +161,7 @@ public class Robot implements IRobot,Observable {
 
 	@Override
 	public void addReward(int reward) {
-		this.reward += reward;
+		this.totalReward += reward;
 		
 	}
 	
@@ -182,6 +175,23 @@ public class Robot implements IRobot,Observable {
 	
 	public void setState(State state) {
 		this.state = state;
+	}
+
+	@Override
+	public Point getPosition() {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public RobotAvatar getRobot() { //bad coding but necessary
+		return monitor.getRobotAvatar(this);
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 };

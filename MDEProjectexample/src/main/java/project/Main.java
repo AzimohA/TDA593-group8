@@ -22,18 +22,17 @@ public class Main {
 	
 		
 		Environment testEnvironment = new UniversityEnvironment(Color.BLUE);
+		testEnvironment.defineAreas();
 		
 		Set<RobotAvatar> robots = new HashSet<>();
 
-		RobotAvatar robot1 = new RobotAvatar(new Point(1, 1), "Robot 1");
-		RobotAvatar robot2 = new RobotAvatar(new Point(1, 3), "Robot 2");
+		RobotAvatar robot1 = new RobotAvatar(new Point(-4, -4), "Robot 1");
+		RobotAvatar robot2 = new RobotAvatar(new Point(4, 4), "Robot 2");
 
 		robots.add(robot1);
 		robots.add(robot2);
-
-		robot2.setDestination(new Point(-1,-3));
 		
-		AbstractSimulatorMonitor controller = new SimulatorMonitor(robots, testEnvironment);
+		AbstractSimulatorMonitor controller = new Monitor(robots, testEnvironment);
 
 	}
 

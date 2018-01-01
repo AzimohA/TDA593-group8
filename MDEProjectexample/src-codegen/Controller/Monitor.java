@@ -15,7 +15,7 @@ import Model.Assignment5Mission;
 import Model.Environment;
 import Model.IMission;
 import Model.IRobot;
-import Model.Mission;
+import Model.IMission;
 import Model.Robot;
 import Model.State;
 import Model.StopStrategy;
@@ -48,6 +48,9 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 		
 	}
 	
+	public RobotAvatar getRobotAvatar(IRobot robot) {
+		return robotAvatarModels.get(robot);
+	}
 
 	/**
 	 * 
@@ -57,8 +60,9 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	private void setUpRobotAvatars(Set<RobotAvatar> robotAvatars) {
 		for (RobotAvatar rob:robotAvatars) {
 			IRobot modelRobot = getRobotAvatarParams(rob);
+			modelRobot.attach(this);
 			this.robotAvatarModels.put((Robot) modelRobot, rob);
-			createNavigate(robot, environment.getAreas());
+			createNavigate(modelRobot, environment.getAreas());
 		}
 		
 	}
@@ -112,11 +116,18 @@ public class Monitor extends AbstractSimulatorMonitor<RobotAvatar> implements Ob
 	}
 	
 	private Robot getRobotAvatarParams(RobotAvatar robAvatar) {
-		IMission mission = new Assignment5Mission(robAvatar.getName(),null); //HARDCODE
+		IMission mission = new Assignment5Mission(robAvatar.getName(), null); //HARDCODE
 		Strategy strategy = new StopStrategy(mission); //HARDCODE
 		
 		
 		return new Robot(robAvatar.getName(), robAvatar.getPosition(), strategy, State.OKAY, mission, this); //robot probably doesn't need strategy or mission, as navigate keeps track of these
+	}
+
+
+	@Override
+	public void update(RobotAvatar arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

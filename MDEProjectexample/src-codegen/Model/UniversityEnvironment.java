@@ -83,10 +83,10 @@ public class UniversityEnvironment extends Environment {
         
         List<Area> area = new LinkedList<Area>();
         
-        area.add(new Area(point1, 3, "Area1", 3, new LocationController(point1, 3, this)));
-        area.add(new Area(point2, 3, "Area2", 3, new LocationController(point2, 3, this)));
-        area.add(new Area(point3, 3, "Area3", 3, new LocationController(point3, 3, this)));
-        area.add(new Area(point4, 3, "Area4", 3, new LocationController(point4, 3, this)));
+        area.add(new Area(point1, 15, "Area1", 3, new LocationController(point1, 15, this)));
+        area.add(new Area(point2, 15, "Area2", 3, new LocationController(point2, 15, this)));
+        area.add(new Area(point3, 15, "Area3", 3, new LocationController(point3, 15, this)));
+        area.add(new Area(point4, 15, "Area4", 3, new LocationController(point4, 15, this)));
 		
 		return area;
 	}

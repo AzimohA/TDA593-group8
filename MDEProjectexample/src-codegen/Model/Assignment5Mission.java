@@ -34,7 +34,15 @@ public class Assignment5Mission implements IMission {
 	
 	public Assignment5Mission(String name, List<Point> points) {
 		this.name = name;
-		this.points = null; //Change to list of points that allows for mission 5 to be completed
+		this.points = new ArrayList<Point>(); //Change to list of points that allows for mission 5 to be completed. HARDCODE
+		Point point1 = new Point(-3.5, 3.5);
+        Point point2 = new Point(-3.5, -3.5);
+        Point point3 = new Point (3.5, -3.5);
+        Point point4 = new Point (3.5, 3.5);
+        this.points.add(point1);
+        this.points.add(point2);
+        this.points.add(point3);
+        this.points.add(point4);
 		
 	}
 	

@@ -49,7 +49,9 @@ public class Navigate implements Observer, Runnable {
 	 * 
 	 */
 	public void move() throws InterruptedException {
+		System.out.println(robot.getStrategy());
 		List<Point> strategy = robot.getStrategy().getPoints(); //Wrong type of Point is returned
+		
 		
 		List<Area> areaOrder = new LinkedList<Area>();
 		for(Point point : strategy) {
@@ -63,7 +65,7 @@ public class Navigate implements Observer, Runnable {
 			while( ! (robot.isAtPosition(point))) {
 				
 			}
-			robot.getStrategy().isAtDestination();
+			//robot.getStrategy().isAtDestination();
 		}
 		
 		for(Area area : areaOrder) {
@@ -74,9 +76,9 @@ public class Navigate implements Observer, Runnable {
 	}
 	
 
-	private synchronized void acquireAreas(List<Area> areaOrder) throws InterruptedException {
-		for(Area area : areaOrder) {
-			
+	public synchronized void acquireAreas(List<Area> areaOrder) throws InterruptedException {
+		for(Area area : areas) { //areas should be areaOrder
+			System.out.println(area);
 			while( !area.getLocationController().tryAcquire(robot.getRobot())) { //Robot needs to extend AbstractRobotSimulator
 			}
 		}
