@@ -65,10 +65,11 @@ public class Navigate implements Observer, Runnable {
 			while( ! (robot.isAtPosition(point))) {
 				
 			}
-			//robot.getStrategy().isAtDestination();
+			robot.getStrategy().isAtDestination();
 		}
 		
-		for(Area area : areaOrder) {
+		for(Area area : areas) { //areas should be areaOrder
+			System.out.print("area = " + area);
 			area.getLocationController().release(robot.getRobot());
 		}
 		
